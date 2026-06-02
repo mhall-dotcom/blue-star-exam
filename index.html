@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florida Unarmed Security Officer — Final Examination</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Times New Roman',Times,serif;font-size:12pt;color:#000;background:#fff;max-width:850px;margin:0 auto;padding:20px;}
+  /* Cover Page */
+  .cover{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;page-break-after:always;}
+  .logo-box{border:3px solid #1a3a5c;padding:20px 40px;margin-bottom:20px;display:inline-block;}
+  .logo-star{font-size:60pt;color:#1a3a5c;line-height:1;}
+  .logo-name{font-size:22pt;font-weight:bold;color:#1a3a5c;letter-spacing:4px;}
+  .logo-sub{font-size:11pt;color:#1a3a5c;letter-spacing:2px;}
+  .logo-state{font-size:10pt;color:#1a3a5c;letter-spacing:3px;margin-top:2px;}
+  .cover h1{font-size:18pt;font-weight:bold;margin:30px 0 10px;text-transform:uppercase;color:#1a3a5c;}
+  .cover h2{font-size:14pt;margin:0 0 30px;}
+  .cover-fields{text-align:left;width:70%;margin-top:20px;}
+  .cover-fields .field{display:flex;align-items:center;margin-bottom:14px;font-size:12pt;}
+  .cover-fields .label{min-width:140px;font-weight:bold;}
+  .cover-fields input[type="text"]{flex:1;border:none;border-bottom:2px solid #1a3a5c;padding:4px 6px;font-size:12pt;font-family:'Times New Roman',Times,serif;background:transparent;outline:none;color:#000;}
+  .cover-fields input[type="text"]:focus{border-bottom-color:#6795af;background:#f0f6ff;}
+  .cover-fields input[type="text"].score-field{background:#f0f4f8;color:#1a3a5c;font-weight:bold;}
+  @media print{.cover-fields input[type="text"]{border-bottom:1px solid #000;background:transparent!important;}}
+  .cover-info{border:2px solid #1a3a5c;padding:12px 20px;margin-top:20px;font-size:11pt;text-align:left;width:70%;}
+  .cover-info p{margin-bottom:6px;}
+  /* Test body */
+  .instructions{border:2px solid #000;padding:12px 16px;margin:20px 0;font-size:11pt;}
+  .instructions h3{text-align:center;margin-bottom:8px;font-size:12pt;}
+  .chapter-header{background:#1a3a5c;color:#fff;padding:8px 14px;margin:28px 0 14px;font-size:13pt;font-weight:bold;}
+  .chapter-sub{color:#1a3a5c;font-size:11pt;font-style:italic;margin-bottom:12px;padding-left:4px;}
+  .question{margin-bottom:16px;padding:0 4px;}
+  .question .qnum{font-weight:bold;}
+  .question .qtext{display:inline;}
+  .options{margin-top:6px;margin-left:18px;}
+  .options label{display:block;margin-bottom:3px;cursor:pointer;}
+  .options label:hover{background:#f0f4f8;}
+  .tf-options{margin-top:6px;margin-left:18px;}
+  .tf-options label{display:inline-block;margin-right:30px;cursor:pointer;}
+  /* Grading display */
+  .correct-indicator{color:green;font-weight:bold;margin-left:8px;}
+  .wrong-indicator{color:red;font-weight:bold;margin-left:8px;}
+  .correct-ans{color:green;font-size:10pt;margin-left:18px;margin-top:3px;}
+  input[type="radio"].wrong-sel + span{color:red;text-decoration:line-through;}
+  .result-box{border:3px solid #1a3a5c;padding:20px;margin:20px 0;text-align:center;font-size:14pt;}
+  .result-box .score{font-size:28pt;font-weight:bold;color:#1a3a5c;}
+  .result-box .pass{color:green;font-size:16pt;font-weight:bold;}
+  .result-box .fail{color:red;font-size:16pt;font-weight:bold;}
+  /* ── Submit section ── */
+  .exam-end-divider{border:none;border-top:3px solid #1a3a5c;margin:40px 0 0;}
+  .submit-area{text-align:center;margin:0;padding:40px 30px 50px;background:linear-gradient(135deg,#1a3a5c 0%,#2a5a8c 100%);border-radius:0 0 8px 8px;}
+  .submit-area .submit-title{font-size:17pt;font-weight:bold;color:#fff;margin-bottom:6px;letter-spacing:0.5px;}
+  .submit-area .submit-divider{width:60px;height:3px;background:rgba(255,255,255,0.4);margin:10px auto 18px;border-radius:2px;}
+  .submit-area .submit-note{font-size:10.5pt;color:rgba(255,255,255,0.88);margin-bottom:28px;line-height:1.75;max-width:560px;margin-left:auto;margin-right:auto;}
+  .submit-area .submit-note strong{color:#fff;}
+  .submit-btn{background:#fff;color:#1a3a5c;border:3px solid rgba(255,255,255,0.3);padding:18px 64px;font-size:16pt;cursor:pointer;font-family:'Times New Roman',Times,serif;font-weight:bold;border-radius:50px;letter-spacing:1px;box-shadow:0 4px 18px rgba(0,0,0,0.25);transition:all 0.2s;}
+  .submit-btn:hover{background:#1a3a5c;color:#fff;border-color:#fff;box-shadow:0 6px 24px rgba(0,0,0,0.4);}
+  .submit-btn:active{transform:translateY(2px);}
+  /* ── Sticky bar ── */
+  .sticky-submit{position:fixed;bottom:0;left:0;right:0;background:#1a3a5c;padding:8px 24px;text-align:center;z-index:999;display:flex;align-items:center;justify-content:space-between;box-shadow:0 -2px 8px rgba(0,0,0,0.3);border-top:2px solid #6795af;}
+  .sticky-submit-left{color:rgba(255,255,255,0.7);font-size:9.5pt;letter-spacing:0.5px;}
+  .sticky-submit-left strong{color:#fff;font-size:10pt;}
+  .sticky-submit-btn{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.5);padding:6px 22px;font-size:10.5pt;font-weight:bold;cursor:pointer;border-radius:20px;font-family:'Times New Roman',Times,serif;letter-spacing:0.5px;transition:all 0.2s;}
+  .sticky-submit-btn:hover{background:#fff;color:#1a3a5c;border-color:#fff;}
+  @media print{.sticky-submit{display:none!important;}.submit-area,.exam-end-divider{display:none!important;}}
+  /* Print styles */
+  @media print {
+    .submit-area,.result-box{display:none!important;}
+    .cover{page-break-after:always;}
+    .chapter-header{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    a{display:none;}
+    input[type="radio"]{accent-color:#000;}
+  }
+
+  /* Confirmation screen */
+  .confirm-screen{display:none;max-width:650px;margin:60px auto;text-align:center;font-family:'Times New Roman',Times,serif;}
+  .confirm-logo-box{border:3px solid #1a3a5c;padding:16px 36px;display:inline-block;margin-bottom:24px;}
+  .confirm-logo-star{font-size:50pt;color:#1a3a5c;line-height:1;}
+  .confirm-logo-name{font-size:18pt;font-weight:bold;color:#1a3a5c;letter-spacing:4px;}
+  .confirm-logo-sub{font-size:9pt;color:#1a3a5c;letter-spacing:2px;}
+  .confirm-card{border:3px solid #1a3a5c;border-radius:8px;padding:36px 40px;background:#f8fafc;margin-bottom:20px;}
+  .confirm-title{font-size:16pt;font-weight:bold;color:#1a3a5c;margin-bottom:20px;}
+  .confirm-row{display:flex;justify-content:space-between;border-bottom:1px solid #ccc;padding:10px 0;font-size:12pt;}
+  .confirm-row:last-of-type{border-bottom:none;}
+  .confirm-label{font-weight:bold;color:#444;}
+  .confirm-value{color:#000;}
+  .confirm-score{font-size:28pt;font-weight:bold;color:#1a3a5c;margin:16px 0 4px;}
+  .confirm-pass{font-size:16pt;font-weight:bold;color:green;margin-bottom:16px;}
+  .confirm-fail{font-size:16pt;font-weight:bold;color:#cc0000;margin-bottom:16px;}
+  .confirm-msg{font-size:11pt;color:#333;line-height:1.7;margin-top:16px;padding:14px;background:#e8eff5;border-radius:6px;border-left:4px solid #1a3a5c;}
+  .confirm-checkmark{font-size:52pt;color:green;line-height:1;}
+  .confirm-x{font-size:52pt;color:#cc0000;line-height:1;}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+  <div class="logo-box">
+    <div class="logo-star">&#9733;</div>
+    <div class="logo-name">BLUE STAR</div>
+    <div class="logo-sub">SECURITY &amp; TRAINING</div>
+    <div class="logo-state">FLORIDA</div>
+  </div>
+  <h1>Florida Unarmed Security Officer<br>Final Examination</h1>
+  <h2>Class D License — 40-Hour Training Course</h2>
+  <div class="cover-fields">
+    <div class="field"><span class="label">Student Name:</span><input type="text" id="studentName" name="studentName" placeholder="Enter full name" required></div>
+    <div class="field"><span class="label">Date:</span><input type="text" id="examDate" name="examDate" placeholder="MM/DD/YYYY"></div>
+    <div class="field"><span class="label">Instructor:</span><input type="text" id="instructor" name="instructor" placeholder="Instructor name"></div>
+    <div class="field"><span class="label">Class Location:</span><input type="text" id="classLocation" name="classLocation" placeholder="City / Facility"></div>
+    <div class="field"><span class="label">Score:</span><input type="text" id="scoreField" name="scoreField" class="score-field" placeholder="Auto-filled on submit" readonly></div>
+  </div>
+  <div class="cover-info">
+    <p><strong>Time Allowed:</strong> 2 Hours</p>
+    <p><strong>Total Questions:</strong> 170</p>
+    <p><strong>Passing Score:</strong> 75% (128 correct)</p>
+    <p><strong>Question Types:</strong> Multiple Choice and True/False</p>
+    <p><strong>Instructions:</strong> Select the BEST answer for each question. This is an open-book examination. Once submitted online, your grade will be calculated immediately.</p>
+  </div>
+</div>
+
+<!-- INSTRUCTIONS -->
+<div class="instructions">
+  <h3>EXAMINATION INSTRUCTIONS</h3>
+  <p>1. This examination contains 170 questions covering Chapters 1–18.</p>
+  <p>2. Read each question carefully before selecting your answer.</p>
+  <p>3. For Multiple Choice questions, select the ONE best answer (A, B, C, or D).</p>
+  <p>4. For True/False questions, select True or False.</p>
+  <p>5. All questions must be answered. Unanswered questions will be marked incorrect.</p>
+  <p>6. <strong>Online students:</strong> When you click "Submit and Grade Test," your score will appear immediately.</p>
+  <p>8. <strong>In-person students:</strong> Do not click the Submit button. Your instructor will collect and grade your test.</p>
+  
+</div>
+
+<form id="examForm" onsubmit="gradeExam(event)">
+
+<!-- ============ CHAPTER 1 ============ -->
+<div class="chapter-header">CHAPTER 1 — Florida Security Licensing and Laws</div>
+<div class="chapter-sub">Topics: Chapter 493, FDACS, Definitions, License Requirements, Weapons &amp; Firearms, Disciplinary Guidelines, Use of Force, Evidence Preservation, Court Testimony</div>
+
+<div class="question"><span class="qnum">1.</span> <span class="qtext">Which state agency regulates security licensing under Florida Chapter 493?</span>
+<div class="options">
+<label><input type="radio" name="q1" value="A"> A) Florida Department of Law Enforcement (FDLE)</label>
+<label><input type="radio" name="q1" value="B"> B) Florida Department of Agriculture and Consumer Services (FDACS)</label>
+<label><input type="radio" name="q1" value="C"> C) Florida Department of Business and Professional Regulation (DBPR)</label>
+<label><input type="radio" name="q1" value="D"> D) Florida Department of Health (DOH)</label>
+</div></div>
+
+<div class="question"><span class="qnum">2.</span> <span class="qtext">Under Chapter 493, the term "person" includes:</span>
+<div class="options">
+<label><input type="radio" name="q2" value="A"> A) Only individual human beings</label>
+<label><input type="radio" name="q2" value="B"> B) Only corporations and partnerships</label>
+<label><input type="radio" name="q2" value="C"> C) Any individual, firm, company, agency, organization, partnership, or corporation</label>
+<label><input type="radio" name="q2" value="D"> D) Only licensed security agencies</label>
+</div></div>
+
+<div class="question"><span class="qnum">3.</span> <span class="qtext">Under Florida law, what does "unarmed" mean for a Class "D" licensee while on duty?</span>
+<div class="options">
+<label><input type="radio" name="q3" value="A"> A) The officer may carry only a baton, not a firearm</label>
+<label><input type="radio" name="q3" value="B"> B) No firearm shall be carried while providing services regulated by Chapter 493</label>
+<label><input type="radio" name="q3" value="C"> C) The officer may carry a concealed firearm with a CWFL</label>
+<label><input type="radio" name="q3" value="D"> D) The officer is prohibited from wearing body armor</label>
+</div></div>
+
+<div class="question"><span class="qnum">4.</span> <span class="qtext">What is the minimum age requirement for an individual to be licensed under Chapter 493?</span>
+<div class="options">
+<label><input type="radio" name="q4" value="A"> A) 16 years old</label>
+<label><input type="radio" name="q4" value="B"> B) 17 years old</label>
+<label><input type="radio" name="q4" value="C"> C) 18 years old</label>
+<label><input type="radio" name="q4" value="D"> D) 21 years old</label>
+</div></div>
+
+<div class="question"><span class="qnum">5.</span> <span class="qtext">A "conviction" under Florida's Chapter 493 is defined as:</span>
+<div class="options">
+<label><input type="radio" name="q5" value="A"> A) An adjudication of guilt only if the person served prison time</label>
+<label><input type="radio" name="q5" value="B"> B) An adjudication of guilt resulting from plea or trial, even if the sentence was suspended</label>
+<label><input type="radio" name="q5" value="C"> C) Only a guilty verdict after a jury trial</label>
+<label><input type="radio" name="q5" value="D"> D) A criminal charge that has not yet been resolved</label>
+</div></div>
+
+<div class="question"><span class="qnum">6.</span> <span class="qtext">Under Chapter 493, a "felony" includes an offense punishable by:</span>
+<div class="options">
+<label><input type="radio" name="q6" value="A"> A) Imprisonment of up to 30 days</label>
+<label><input type="radio" name="q6" value="B"> B) Imprisonment of up to 6 months</label>
+<label><input type="radio" name="q6" value="C"> C) Imprisonment of more than 1 year</label>
+<label><input type="radio" name="q6" value="D"> D) Any misdemeanor in Florida</label>
+</div></div>
+
+<div class="question"><span class="qnum">7.</span> <span class="qtext">What is the required timeframe for a Class "G" licensee and employing agency to report a firearm discharge while on duty to the Department?</span>
+<div class="options">
+<label><input type="radio" name="q7" value="A"> A) 24 hours</label>
+<label><input type="radio" name="q7" value="B"> B) 3 working days</label>
+<label><input type="radio" name="q7" value="C"> C) 5 working days</label>
+<label><input type="radio" name="q7" value="D"> D) 10 working days</label>
+</div></div>
+
+<div class="question"><span class="qnum">8.</span> <span class="qtext">Which license class must a security officer also hold in order to be authorized to carry a firearm while performing regulated duties?</span>
+<div class="options">
+<label><input type="radio" name="q8" value="A"> A) Class "B"</label>
+<label><input type="radio" name="q8" value="B"> B) Class "G"</label>
+<label><input type="radio" name="q8" value="C"> C) Class "K"</label>
+<label><input type="radio" name="q8" value="D"> D) Class "M"</label>
+</div></div>
+
+<div class="question"><span class="qnum">9.</span> <span class="qtext">Under Florida law (Chapter 776), when may deadly force be used in self-defense?</span>
+<div class="options">
+<label><input type="radio" name="q9" value="A"> A) Whenever a person feels threatened by another person</label>
+<label><input type="radio" name="q9" value="B"> B) Only when a law enforcement officer authorizes it</label>
+<label><input type="radio" name="q9" value="C"> C) When a person reasonably believes it is necessary to prevent imminent death or great bodily harm</label>
+<label><input type="radio" name="q9" value="D"> D) Only when defending property from theft</label>
+</div></div>
+
+<div class="question"><span class="qnum">10.</span> <span class="qtext">What is the primary role of private security at an incident scene?</span>
+<div class="options">
+<label><input type="radio" name="q10" value="A"> A) Conduct a full criminal investigation and determine guilt</label>
+<label><input type="radio" name="q10" value="B"> B) Secure the scene and prevent tampering with potential evidence</label>
+<label><input type="radio" name="q10" value="C"> C) Interview suspects and assign blame</label>
+<label><input type="radio" name="q10" value="D"> D) Transport evidence directly to law enforcement</label>
+</div></div>
+
+<div class="question"><span class="qnum">11.</span> <span class="qtext">Chain of custody is best defined as:</span>
+<div class="options">
+<label><input type="radio" name="q11" value="A"> A) The process of tagging and photographing evidence only</label>
+<label><input type="radio" name="q11" value="B"> B) The chronological documentation and tracking of evidence from collection to court</label>
+<label><input type="radio" name="q11" value="C"> C) A legal document authorizing an arrest</label>
+<label><input type="radio" name="q11" value="D"> D) The process of assigning a case to a detective</label>
+</div></div>
+
+<div class="question"><span class="qnum">12.</span> <span class="qtext">When testifying in court, security personnel are expected to:</span>
+<div class="options">
+<label><input type="radio" name="q12" value="A"> A) Memorize a script provided by the employing agency</label>
+<label><input type="radio" name="q12" value="B"> B) Present information accurately, stay neutral, and avoid personal opinions</label>
+<label><input type="radio" name="q12" value="C"> C) Provide a written statement only; no in-person appearance is required</label>
+<label><input type="radio" name="q12" value="D"> D) Consult only with the prosecuting attorney before answering questions</label>
+</div></div>
+
+<div class="question"><span class="qnum">13.</span> <span class="qtext">According to Rule 5N-1.120, are Chapter 493 licenses transferable from the original licensee to another person?</span>
+<div class="options">
+<label><input type="radio" name="q13" value="A"> A) Yes, they may be transferred to immediate family members</label>
+<label><input type="radio" name="q13" value="B"> B) Yes, if approved in writing by the Division</label>
+<label><input type="radio" name="q13" value="C"> C) No, licenses are not transferable to any other person</label>
+<label><input type="radio" name="q13" value="D"> D) Yes, with written consent of the original licensee</label>
+</div></div>
+
+<div class="question"><span class="qnum">14.</span> <span class="qtext">An applicant who has been involuntarily committed to a mental health treatment facility is permanently ineligible for licensure, even if judicial competency has been restored.</span>
+<div class="tf-options">
+<label><input type="radio" name="q14" value="T"> True</label>
+<label><input type="radio" name="q14" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">15.</span> <span class="qtext">Having two or more convictions under Florida\'s DUI statute (s. 316.193) within the three years immediately before applying is a disqualifier for licensure.</span>
+<div class="tf-options">
+<label><input type="radio" name="q15" value="T"> True</label>
+<label><input type="radio" name="q15" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">16.</span> <span class="qtext">A Class \'G\' license remains in effect even after the holder stops working in an eligible primary license class such as Class \'D\'.</span>
+<div class="tf-options">
+<label><input type="radio" name="q16" value="T"> True</label>
+<label><input type="radio" name="q16" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">17.</span> <span class="qtext">A Class \'G\' licensee may carry a .357 caliber revolver loaded with .38 caliber ammunition while on duty.</span>
+<div class="tf-options">
+<label><input type="radio" name="q17" value="T"> True</label>
+<label><input type="radio" name="q17" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">18.</span> <span class="qtext">Under Chapter 493, a licensee may carry a maximum of three firearms on their person while performing security duties.</span>
+<div class="tf-options">
+<label><input type="radio" name="q18" value="T"> True</label>
+<label><input type="radio" name="q18" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">19.</span> <span class="qtext">A Florida concealed weapon/firearm license (CWFL) satisfies the requirement to hold a Class \'G\' license for armed security work.</span>
+<div class="tf-options">
+<label><input type="radio" name="q19" value="T"> True</label>
+<label><input type="radio" name="q19" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">20.</span> <span class="qtext">When force is used lawfully under Chapter 776, the law provides immunity from both criminal prosecution and civil liability.</span>
+<div class="tf-options">
+<label><input type="radio" name="q20" value="T"> True</label>
+<label><input type="radio" name="q20" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">21.</span> <span class="qtext">Under Florida disciplinary guidelines, a licensee who fails to carry their agency ID card while on duty may face disciplinary action.</span>
+<div class="tf-options">
+<label><input type="radio" name="q21" value="T"> True</label>
+<label><input type="radio" name="q21" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">22.</span> <span class="qtext">Falling asleep while on duty is not listed as a violation in Florida\'s security disciplinary guidelines.</span>
+<div class="tf-options">
+<label><input type="radio" name="q22" value="T"> True</label>
+<label><input type="radio" name="q22" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">23.</span> <span class="qtext">The Department may revoke or suspend a Class \'G\' license if a firearm discharge is not reported within the required five working days.</span>
+<div class="tf-options">
+<label><input type="radio" name="q23" value="T"> True</label>
+<label><input type="radio" name="q23" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">24.</span> <span class="qtext">Under Florida\'s disciplinary guidelines, \'probation\' means the permanent revocation of a security license.</span>
+<div class="tf-options">
+<label><input type="radio" name="q24" value="T"> True</label>
+<label><input type="radio" name="q24" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">25.</span> <span class="qtext">Chapter 776, Florida Statutes covers lawful use of force in self-defense, defense of others, and defense of property.</span>
+<div class="tf-options">
+<label><input type="radio" name="q25" value="T"> True</label>
+<label><input type="radio" name="q25" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">26.</span> <span class="qtext">A security officer who provides false testimony in court may face consequences including loss of credibility and potential criminal charges for perjury.</span>
+<div class="tf-options">
+<label><input type="radio" name="q26" value="T"> True</label>
+<label><input type="radio" name="q26" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 2 ============ -->
+<div class="chapter-header">CHAPTER 2 — Professional Conduct and Post Orders</div>
+<div class="chapter-sub">Topics: Ethics, Appearance, Post Orders, Security Policies, Conduct Standards</div>
+
+<div class="question"><span class="qnum">27.</span> <span class="qtext">What is the primary purpose of written post orders?</span>
+<div class="options">
+<label><input type="radio" name="q27" value="A"> A) To document an officer's personal preferences for their shift</label>
+<label><input type="radio" name="q27" value="B"> B) To provide specific duties and instructions for a particular security post or site</label>
+<label><input type="radio" name="q27" value="C"> C) To record daily financial expenses for the agency</label>
+<label><input type="radio" name="q27" value="D"> D) To outline general security industry standards only</label>
+</div></div>
+
+<div class="question"><span class="qnum">28.</span> <span class="qtext">A security officer arrives at a site where no written post orders exist. The officer should:</span>
+<div class="options">
+<label><input type="radio" name="q28" value="A"> A) Improvise and do whatever seems best</label>
+<label><input type="radio" name="q28" value="B"> B) Ask a coworker what they did on previous shifts</label>
+<label><input type="radio" name="q28" value="C"> C) Request written post orders to ensure clarity, consistency, and accountability</label>
+<label><input type="radio" name="q28" value="D"> D) Follow only their agency's general handbook and ignore site-specific needs</label>
+</div></div>
+
+<div class="question"><span class="qnum">29.</span> <span class="qtext">Which of the following is an example of appropriate professional appearance for a security officer?</span>
+<div class="options">
+<label><input type="radio" name="q29" value="A"> A) Wearing a uniform that closely resembles a local police officer's uniform</label>
+<label><input type="radio" name="q29" value="B"> B) Wearing a clean, well-maintained uniform with proper identification displayed</label>
+<label><input type="radio" name="q29" value="C"> C) Wearing casual civilian clothing to blend in with the public</label>
+<label><input type="radio" name="q29" value="D"> D) Wearing uniform items from other agencies to appear more authoritative</label>
+</div></div>
+
+<div class="question"><span class="qnum">30.</span> <span class="qtext">The professional code of ethics for security officers requires them to:</span>
+<div class="options">
+<label><input type="radio" name="q30" value="A"> A) Do whatever the client requests, even if it violates the law</label>
+<label><input type="radio" name="q30" value="B"> B) Maintain confidentiality of sensitive information on a need-to-know basis</label>
+<label><input type="radio" name="q30" value="C"> C) Share client information freely with all coworkers</label>
+<label><input type="radio" name="q30" value="D"> D) Use physical force to control all difficult situations</label>
+</div></div>
+
+<div class="question"><span class="qnum">31.</span> <span class="qtext">Security professionals must comply with:</span>
+<div class="options">
+<label><input type="radio" name="q31" value="A"> A) Only the client's special verbal requests</label>
+<label><input type="radio" name="q31" value="B"> B) Only federal laws, excluding state laws</label>
+<label><input type="radio" name="q31" value="C"> C) All relevant laws, regulations, and industry standards</label>
+<label><input type="radio" name="q31" value="D"> D) Only the employing security company's internal policies</label>
+</div></div>
+
+<div class="question"><span class="qnum">32.</span> <span class="qtext">A security officer who works without written post orders cannot be held accountable for site-specific duties.</span>
+<div class="tf-options">
+<label><input type="radio" name="q32" value="T"> True</label>
+<label><input type="radio" name="q32" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">33.</span> <span class="qtext">Sharing a client\'s confidential security information on social media, even for safety awareness purposes, violates professional ethics.</span>
+<div class="tf-options">
+<label><input type="radio" name="q33" value="T"> True</label>
+<label><input type="radio" name="q33" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">34.</span> <span class="qtext">Security officers may use their client\'s name and address in personal conversations with friends without violating confidentiality standards.</span>
+<div class="tf-options">
+<label><input type="radio" name="q34" value="T"> True</label>
+<label><input type="radio" name="q34" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">35.</span> <span class="qtext">A clean, well-maintained uniform is considered a professional conduct requirement for security officers.</span>
+<div class="tf-options">
+<label><input type="radio" name="q35" value="T"> True</label>
+<label><input type="radio" name="q35" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 3 ============ -->
+<div class="chapter-header">CHAPTER 3 — Legal Authority and Limitations</div>
+<div class="chapter-sub">Topics: Arrest Authority, Citizen's Arrest, Retail Theft (F.S. 812.015), Limitations of Private Security</div>
+
+<div class="question"><span class="qnum">36.</span> <span class="qtext">Why do private security guards have limitations on their arrest authority?</span>
+<div class="options">
+<label><input type="radio" name="q36" value="A"> A) Because they lack sufficient physical training</label>
+<label><input type="radio" name="q36" value="B"> B) To prevent them from acting like law enforcement and concerns about impersonation</label>
+<label><input type="radio" name="q36" value="C"> C) Because they have no legal right to stop anyone at any time</label>
+<label><input type="radio" name="q36" value="D"> D) Because their employers restrict all arrest activity by contract</label>
+</div></div>
+
+<div class="question"><span class="qnum">37.</span> <span class="qtext">Under what circumstances may a private security guard make a lawful arrest?</span>
+<div class="options">
+<label><input type="radio" name="q37" value="A"> A) Anytime they suspect someone of committing a crime</label>
+<label><input type="radio" name="q37" value="B"> B) When they receive a reliable tip that a crime was committed elsewhere</label>
+<label><input type="radio" name="q37" value="C"> C) When they witness a crime on the property they are guarding and have reasonable cause to believe the suspect committed it</label>
+<label><input type="radio" name="q37" value="D"> D) When instructed by a supervisor, regardless of whether they witnessed the crime</label>
+</div></div>
+
+<div class="question"><span class="qnum">38.</span> <span class="qtext">A citizen's arrest is best described as:</span>
+<div class="options">
+<label><input type="radio" name="q38" value="A"> A) An arrest made only by off-duty law enforcement officers</label>
+<label><input type="radio" name="q38" value="B"> B) The detention or arrest of an individual by a person who is not a law enforcement officer, when allowed by law</label>
+<label><input type="radio" name="q38" value="C"> C) An arrest that requires prior written authorization from a judge</label>
+<label><input type="radio" name="q38" value="D"> D) Any arrest made by a government official</label>
+</div></div>
+
+<div class="question"><span class="qnum">39.</span> <span class="qtext">What is the key factor that determines the legality of a citizen's arrest?</span>
+<div class="options">
+<label><input type="radio" name="q39" value="A"> A) The severity of the suspected crime</label>
+<label><input type="radio" name="q39" value="B"> B) The specific laws of the jurisdiction where the arrest occurs</label>
+<label><input type="radio" name="q39" value="C"> C) The physical size and strength of the person making the arrest</label>
+<label><input type="radio" name="q39" value="D"> D) Whether the person being arrested physically resists</label>
+</div></div>
+
+<div class="question"><span class="qnum">40.</span> <span class="qtext">According to Florida Statute 812.015, retail theft includes:</span>
+<div class="options">
+<label><input type="radio" name="q40" value="A"> A) Only physically carrying merchandise out of a store without paying</label>
+<label><input type="radio" name="q40" value="B"> B) Taking merchandise, concealing items, altering price tags, or switching packaging to pay less than full price</label>
+<label><input type="radio" name="q40" value="C"> C) Returning merchandise without a receipt</label>
+<label><input type="radio" name="q40" value="D"> D) Exchanging a higher-priced item for a lower-priced item of the same type</label>
+</div></div>
+
+<div class="question"><span class="qnum">41.</span> <span class="qtext">Under Florida Statute 812.015, a retailer may:</span>
+<div class="options">
+<label><input type="radio" name="q41" value="A"> A) Physically detain a shoplifting suspect indefinitely until police arrive</label>
+<label><input type="radio" name="q41" value="B"> B) Detain an individual suspected of retail theft for a reasonable time to investigate</label>
+<label><input type="radio" name="q41" value="C"> C) Use any force necessary to retrieve stolen merchandise</label>
+<label><input type="radio" name="q41" value="D"> D) Immediately arrest and hold the suspect without involving law enforcement</label>
+</div></div>
+
+<div class="question"><span class="qnum">42.</span> <span class="qtext">A supervisor instructs a security officer to make an arrest even though the officer did not witness the alleged crime. The officer should:</span>
+<div class="options">
+<label><input type="radio" name="q42" value="A"> A) Follow supervisor instructions without question to avoid disciplinary action</label>
+<label><input type="radio" name="q42" value="B"> B) Make the arrest quickly and document the supervisor's instruction afterward</label>
+<label><input type="radio" name="q42" value="C"> C) Refuse, because arrest authority requires the officer to have personally witnessed the crime and have reasonable cause</label>
+<label><input type="radio" name="q42" value="D"> D) Call law enforcement and wait for them to make the arrest without notifying the supervisor</label>
+</div></div>
+
+<div class="question"><span class="qnum">43.</span> <span class="qtext">A security guard who witnesses a shoplifting incident at a store they are NOT assigned to guard may make a lawful arrest based on what they witnessed.</span>
+<div class="tf-options">
+<label><input type="radio" name="q43" value="T"> True</label>
+<label><input type="radio" name="q43" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">44.</span> <span class="qtext">Under F.S. 812.015, switching the packaging of a higher-priced product to pay a lower price constitutes retail theft.</span>
+<div class="tf-options">
+<label><input type="radio" name="q44" value="T"> True</label>
+<label><input type="radio" name="q44" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">45.</span> <span class="qtext">A retailer may detain a suspected shoplifter indefinitely until law enforcement arrives.</span>
+<div class="tf-options">
+<label><input type="radio" name="q45" value="T"> True</label>
+<label><input type="radio" name="q45" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">46.</span> <span class="qtext">Arrest authority limitations on private security officers exist in part to prevent them from impersonating law enforcement.</span>
+<div class="tf-options">
+<label><input type="radio" name="q46" value="T"> True</label>
+<label><input type="radio" name="q46" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">47.</span> <span class="qtext">Citizen\'s arrest laws are identical in every jurisdiction across the United States.</span>
+<div class="tf-options">
+<label><input type="radio" name="q47" value="T"> True</label>
+<label><input type="radio" name="q47" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">48.</span> <span class="qtext">A security guard is legally required to make an arrest when instructed by a supervisor, even if the guard did not personally witness the crime.</span>
+<div class="tf-options">
+<label><input type="radio" name="q48" value="T"> True</label>
+<label><input type="radio" name="q48" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 4 ============ -->
+<div class="chapter-header">CHAPTER 4 — Principles of Communications</div>
+<div class="chapter-sub">Topics: Interpersonal Communication, Radio Communication, Reporting Categories, Emergency Levels</div>
+
+<div class="question"><span class="qnum">49.</span> <span class="qtext">Which of the following best describes effective communication in security work?</span>
+<div class="options">
+<label><input type="radio" name="q49" value="A"> A) Lengthy, detailed messages to ensure nothing is missed</label>
+<label><input type="radio" name="q49" value="B"> B) Brief, clear, straightforward, concise, and coherent</label>
+<label><input type="radio" name="q49" value="C"> C) Heavy use of technical jargon to maintain professionalism</label>
+<label><input type="radio" name="q49" value="D"> D) Avoiding all communication unless there is a formal emergency</label>
+</div></div>
+
+<div class="question"><span class="qnum">50.</span> <span class="qtext">When communicating with the public, security officers should be:</span>
+<div class="options">
+<label><input type="radio" name="q50" value="A"> A) Informal and casual to put the public at ease at all times</label>
+<label><input type="radio" name="q50" value="B"> B) Stern yet polite, easy to understand, crisp and clear</label>
+<label><input type="radio" name="q50" value="C"> C) Silent and purely observational to maintain authority</label>
+<label><input type="radio" name="q50" value="D"> D) Aggressive and firm to immediately establish control</label>
+</div></div>
+
+<div class="question"><span class="qnum">51.</span> <span class="qtext">Incident levels in security communication are typically classified as:</span>
+<div class="options">
+<label><input type="radio" name="q51" value="A"> A) Two levels: minor and major</label>
+<label><input type="radio" name="q51" value="B"> B) Three levels: low, medium, and high emergency</label>
+<label><input type="radio" name="q51" value="C"> C) Five levels based on police response codes</label>
+<label><input type="radio" name="q51" value="D"> D) Ten numeric levels based on intensity</label>
+</div></div>
+
+<div class="question"><span class="qnum">52.</span> <span class="qtext">A key purpose of involving the client in creating post orders and security strategy is to:</span>
+<div class="options">
+<label><input type="radio" name="q52" value="A"> A) Give the client control over security officer scheduling</label>
+<label><input type="radio" name="q52" value="B"> B) Establish a proper, shared communication line that reduces confusion and supports the contract</label>
+<label><input type="radio" name="q52" value="C"> C) Allow the client to direct arrest decisions</label>
+<label><input type="radio" name="q52" value="D"> D) Reduce the security company's legal liability only</label>
+</div></div>
+
+<div class="question"><span class="qnum">53.</span> <span class="qtext">Failure or delays in reporting incidents by the security guard can lead to:</span>
+<div class="options">
+<label><input type="radio" name="q53" value="A"> A) Improved response efficiency</label>
+<label><input type="radio" name="q53" value="B"> B) Poor client relations and increased suspicion that the guard was involved in the incident</label>
+<label><input type="radio" name="q53" value="C"> C) Recognition from supervisors for handling the incident independently</label>
+<label><input type="radio" name="q53" value="D"> D) Automatic dismissal of the incident as minor</label>
+</div></div>
+
+<div class="question"><span class="qnum">54.</span> <span class="qtext">Security officers should initiate conversations with bystanders at every opportunity to build positive public relations.</span>
+<div class="tf-options">
+<label><input type="radio" name="q54" value="T"> True</label>
+<label><input type="radio" name="q54" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">55.</span> <span class="qtext">Prompt and accurate reporting of incidents by security officers helps maintain trust between the security company and the client.</span>
+<div class="tf-options">
+<label><input type="radio" name="q55" value="T"> True</label>
+<label><input type="radio" name="q55" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">56.</span> <span class="qtext">Communication during a routine shift is more important than communication during an emergency.</span>
+<div class="tf-options">
+<label><input type="radio" name="q56" value="T"> True</label>
+<label><input type="radio" name="q56" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">57.</span> <span class="qtext">Security officers should categorize incidents by severity level before determining the appropriate level of notification required.</span>
+<div class="tf-options">
+<label><input type="radio" name="q57" value="T"> True</label>
+<label><input type="radio" name="q57" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 5 ============ -->
+<div class="chapter-header">CHAPTER 5 — Professionalism, Human Relations, and Ethics</div>
+<div class="chapter-sub">Topics: Customer Service, Cultural Diversity, Workplace Harassment, Public &amp; Client Relations</div>
+
+<div class="question"><span class="qnum">58.</span> <span class="qtext">What two qualities are described as key to exceptional customer service in security work?</span>
+<div class="options">
+<label><input type="radio" name="q58" value="A"> A) Aggressiveness and quick response speed</label>
+<label><input type="radio" name="q58" value="B"> B) Staying calm and projecting confidence during both emergencies and normal operations</label>
+<label><input type="radio" name="q58" value="C"> C) Being highly social and running personal errands for clients</label>
+<label><input type="radio" name="q58" value="D"> D) Offering extra services beyond security duties whenever requested</label>
+</div></div>
+
+<div class="question"><span class="qnum">59.</span> <span class="qtext">A staff member asks a security officer to leave their post for 20 minutes to help move boxes. The officer should:</span>
+<div class="options">
+<label><input type="radio" name="q59" value="A"> A) Help, since it builds positive relationships with staff</label>
+<label><input type="radio" name="q59" value="B"> B) Leave the post only if no supervisor is watching</label>
+<label><input type="radio" name="q59" value="C"> C) Decline, as it removes them from assigned responsibilities and may violate post orders</label>
+<label><input type="radio" name="q59" value="D"> D) Leave only if the task takes fewer than 10 minutes</label>
+</div></div>
+
+<div class="question"><span class="qnum">60.</span> <span class="qtext">Cultural diversity in the security industry has historically:</span>
+<div class="options">
+<label><input type="radio" name="q60" value="A"> A) Always been fully embraced and practiced at the highest organizational levels</label>
+<label><input type="radio" name="q60" value="B"> B) Had mixed results, and the industry has not always practiced diversity at expected levels</label>
+<label><input type="radio" name="q60" value="C"> C) Had no measurable impact on security operations or business outcomes</label>
+<label><input type="radio" name="q60" value="D"> D) Only applied to industries other than security</label>
+</div></div>
+
+<div class="question"><span class="qnum">61.</span> <span class="qtext">A 2020 study reported that upper management in most security companies was approximately:</span>
+<div class="options">
+<label><input type="radio" name="q61" value="A"> A) 81% female</label>
+<label><input type="radio" name="q61" value="B"> B) 81% male, with many higher-ranking males being white men</label>
+<label><input type="radio" name="q61" value="C"> C) Fully diverse at all levels</label>
+<label><input type="radio" name="q61" value="D"> D) Comprised primarily of minority executives</label>
+</div></div>
+
+<div class="question"><span class="qnum">62.</span> <span class="qtext">Gender diversity in the workforce has been reported to increase financial performance by approximately:</span>
+<div class="options">
+<label><input type="radio" name="q62" value="A"> A) 10%</label>
+<label><input type="radio" name="q62" value="B"> B) 18%</label>
+<label><input type="radio" name="q62" value="C"> C) 24%</label>
+<label><input type="radio" name="q62" value="D"> D) 50%</label>
+</div></div>
+
+<div class="question"><span class="qnum">63.</span> <span class="qtext">Ethnically diverse companies are reportedly more likely to increase client retention by approximately:</span>
+<div class="options">
+<label><input type="radio" name="q63" value="A"> A) 10%</label>
+<label><input type="radio" name="q63" value="B"> B) 22%</label>
+<label><input type="radio" name="q63" value="C"> C) 33%</label>
+<label><input type="radio" name="q63" value="D"> D) 45%</label>
+</div></div>
+
+<div class="question"><span class="qnum">64.</span> <span class="qtext">"Shoulder tapping" in the context of security hiring refers to:</span>
+<div class="options">
+<label><input type="radio" name="q64" value="A"> A) A formal, structured written hiring process</label>
+<label><input type="radio" name="q64" value="B"> B) Hiring based on physical appearance and "looking the part" rather than qualifications</label>
+<label><input type="radio" name="q64" value="C"> C) A diversity awareness training technique</label>
+<label><input type="radio" name="q64" value="D"> D) A customer service approach used in public-facing security roles</label>
+</div></div>
+
+<div class="question"><span class="qnum">65.</span> <span class="qtext">Which of the following is an appropriate customer service action for a security officer?</span>
+<div class="options">
+<label><input type="radio" name="q65" value="A"> A) Running personal errands off-site for regular employees</label>
+<label><input type="radio" name="q65" value="B"> B) Helping a lost visitor with directions while continuing to observe the area</label>
+<label><input type="radio" name="q65" value="C"> C) Leaving your assigned post to assist with event setup in a conference room</label>
+<label><input type="radio" name="q65" value="D"> D) Accepting personal gifts from clients as a token of appreciation</label>
+</div></div>
+
+<div class="question"><span class="qnum">66.</span> <span class="qtext">Harassment cases in a security workplace are more likely to increase when:</span>
+<div class="options">
+<label><input type="radio" name="q66" value="A"> A) Too much diversity training is provided to employees</label>
+<label><input type="radio" name="q66" value="B"> B) Proper harassment prevention policies and practices are not in place</label>
+<label><input type="radio" name="q66" value="C"> C) Diversity hiring exceeds recommended levels</label>
+<label><input type="radio" name="q66" value="D"> D) Security work naturally creates high-stress environments that cause conflict</label>
+</div></div>
+
+<div class="question"><span class="qnum">67.</span> <span class="qtext">Shoulder tapping as a hiring method tends to produce more diverse and qualified security workforces.</span>
+<div class="tf-options">
+<label><input type="radio" name="q67" value="T"> True</label>
+<label><input type="radio" name="q67" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">68.</span> <span class="qtext">Studies indicate that gender diversity in the workforce is linked to decreased financial performance.</span>
+<div class="tf-options">
+<label><input type="radio" name="q68" value="T"> True</label>
+<label><input type="radio" name="q68" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">69.</span> <span class="qtext">Ethnically diverse companies have been found to have higher rates of client retention.</span>
+<div class="tf-options">
+<label><input type="radio" name="q69" value="T"> True</label>
+<label><input type="radio" name="q69" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">70.</span> <span class="qtext">A security officer who regularly performs non-security tasks for staff is fulfilling their primary security responsibilities.</span>
+<div class="tf-options">
+<label><input type="radio" name="q70" value="T"> True</label>
+<label><input type="radio" name="q70" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">71.</span> <span class="qtext">Workplace harassment cases in security companies are more likely to occur when proper policies and enforcement practices are absent.</span>
+<div class="tf-options">
+<label><input type="radio" name="q71" value="T"> True</label>
+<label><input type="radio" name="q71" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">72.</span> <span class="qtext">A security officer\'s professional presence at their post should make the people around them feel comfortable and safe, not uncomfortable.</span>
+<div class="tf-options">
+<label><input type="radio" name="q72" value="T"> True</label>
+<label><input type="radio" name="q72" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">73.</span> <span class="qtext">Non-security tasks must never reduce an officer\'s vigilance, delay emergency response, or violate post orders.</span>
+<div class="tf-options">
+<label><input type="radio" name="q73" value="T"> True</label>
+<label><input type="radio" name="q73" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">74.</span> <span class="qtext">Shoulder tapping is a formal, documented hiring process that meets industry diversity standards.</span>
+<div class="tf-options">
+<label><input type="radio" name="q74" value="T"> True</label>
+<label><input type="radio" name="q74" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 6 ============ -->
+<div class="chapter-header">CHAPTER 6 — Documentation and Reporting</div>
+<div class="chapter-sub">Topics: Incident Reports, Daily Activity Logs, Use of Technology in Documentation</div>
+
+<div class="question"><span class="qnum">75.</span> <span class="qtext">When writing an incident report, which of the following must be included?</span>
+<div class="options">
+<label><input type="radio" name="q75" value="A"> A) Personal opinions about who was at fault for the incident</label>
+<label><input type="radio" name="q75" value="B"> B) The exact date, time, location, individuals involved, clear factual description, and actions taken</label>
+<label><input type="radio" name="q75" value="C"> C) Only the officer's name, badge number, and the time of the incident</label>
+<label><input type="radio" name="q75" value="D"> D) A summary written the following day to ensure greater accuracy</label>
+</div></div>
+
+<div class="question"><span class="qnum">76.</span> <span class="qtext">A security officer's daily activity log should include:</span>
+<div class="options">
+<label><input type="radio" name="q76" value="A"> A) Personal conversations with staff and their opinions</label>
+<label><input type="radio" name="q76" value="B"> B) Shift start/end times, patrol routes, observations made, and equipment checks</label>
+<label><input type="radio" name="q76" value="C"> C) Only major emergency incidents that required law enforcement response</label>
+<label><input type="radio" name="q76" value="D"> D) A list of personal achievements and training activities during the shift</label>
+</div></div>
+
+<div class="question"><span class="qnum">77.</span> <span class="qtext">A daily activity log should record only major emergencies and not routine patrol observations.</span>
+<div class="tf-options">
+<label><input type="radio" name="q77" value="T"> True</label>
+<label><input type="radio" name="q77" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">78.</span> <span class="qtext">Including personal opinions about a suspect in an incident report can compromise the report\'s legal credibility.</span>
+<div class="tf-options">
+<label><input type="radio" name="q78" value="T"> True</label>
+<label><input type="radio" name="q78" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 7 ============ -->
+<div class="chapter-header">CHAPTER 7 — Patrol Techniques</div>
+<div class="chapter-sub">Topics: Foot Patrols, Mobile Patrols, Tour Rounds, Pattern Variations, Patrol Equipment</div>
+
+<div class="question"><span class="qnum">79.</span> <span class="qtext">What is the primary goal of security patrol?</span>
+<div class="options">
+<label><input type="radio" name="q79" value="A"> A) To collect evidence of wrongdoing for prosecution</label>
+<label><input type="radio" name="q79" value="B"> B) Deterrence, surveillance, and responding to potential threats that might otherwise remain hidden</label>
+<label><input type="radio" name="q79" value="C"> C) To maximize officer overtime hours</label>
+<label><input type="radio" name="q79" value="D"> D) To provide transportation for other officers</label>
+</div></div>
+
+<div class="question"><span class="qnum">80.</span> <span class="qtext">What is a key advantage of maintaining random patrol intervals?</span>
+<div class="options">
+<label><input type="radio" name="q80" value="A"> A) It ensures officers complete exactly the same route each time for consistency</label>
+<label><input type="radio" name="q80" value="B"> B) It prevents criminals from identifying predictable patterns that could create security loopholes</label>
+<label><input type="radio" name="q80" value="C"> C) It reduces the total number of officers needed on each shift</label>
+<label><input type="radio" name="q80" value="D"> D) It allows officers to rest between patrol rounds without being noticed</label>
+</div></div>
+
+<div class="question"><span class="qnum">81.</span> <span class="qtext">A predictable, fixed patrol route provides the highest level of security deterrence.</span>
+<div class="tf-options">
+<label><input type="radio" name="q81" value="T"> True</label>
+<label><input type="radio" name="q81" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">82.</span> <span class="qtext">Mobile patrols are generally less effective than foot patrols when it comes to covering large areas in less time.</span>
+<div class="tf-options">
+<label><input type="radio" name="q82" value="T"> True</label>
+<label><input type="radio" name="q82" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 8 ============ -->
+<div class="chapter-header">CHAPTER 8 — Access Control and Alarm Systems</div>
+<div class="chapter-sub">Topics: Access Control Systems, Alarm Types, Visitor Management, Intrusion Response</div>
+
+<div class="question"><span class="qnum">83.</span> <span class="qtext">What is the primary purpose of an access control system?</span>
+<div class="options">
+<label><input type="radio" name="q83" value="A"> A) To keep a record of employee attendance and work hours</label>
+<label><input type="radio" name="q83" value="B"> B) To restrict unauthorized entry and manage who has access to protected areas</label>
+<label><input type="radio" name="q83" value="C"> C) To monitor employee productivity levels</label>
+<label><input type="radio" name="q83" value="D"> D) To track inventory, supplies, and shipping</label>
+</div></div>
+
+<div class="question"><span class="qnum">84.</span> <span class="qtext">When an intrusion alarm sounds at a secured facility, a security officer should:</span>
+<div class="options">
+<label><input type="radio" name="q84" value="A"> A) Search the building alone immediately to find the intruder</label>
+<label><input type="radio" name="q84" value="B"> B) Ignore it if no visible signs of forced entry are present</label>
+<label><input type="radio" name="q84" value="C"> C) Notify the supervisor, secure the area, and document the event</label>
+<label><input type="radio" name="q84" value="D"> D) Call the fire department first, then notify the supervisor</label>
+</div></div>
+
+<div class="question"><span class="qnum">85.</span> <span class="qtext">A security officer should investigate a triggered intrusion alarm alone before notifying supervision or calling for backup.</span>
+<div class="tf-options">
+<label><input type="radio" name="q85" value="T"> True</label>
+<label><input type="radio" name="q85" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">86.</span> <span class="qtext">Access control systems help organizations track who enters and exits secured areas.</span>
+<div class="tf-options">
+<label><input type="radio" name="q86" value="T"> True</label>
+<label><input type="radio" name="q86" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 9 ============ -->
+<div class="chapter-header">CHAPTER 9 — Physical Security</div>
+<div class="chapter-sub">Topics: CPTED, Perimeter Security, Locks, CCTV, Lighting</div>
+
+<div class="question"><span class="qnum">87.</span> <span class="qtext">CPTED stands for:</span>
+<div class="options">
+<label><input type="radio" name="q87" value="A"> A) Combined Police Training and Emergency Deterrence</label>
+<label><input type="radio" name="q87" value="B"> B) Crime Prevention Through Environmental Design</label>
+<label><input type="radio" name="q87" value="C"> C) Comprehensive Physical Training and Equipment Design</label>
+<label><input type="radio" name="q87" value="D"> D) Criminal Patrol Tactics and Evidence Detection</label>
+</div></div>
+
+<div class="question"><span class="qnum">88.</span> <span class="qtext">Which of the following is NOT one of the five basic principles of CPTED?</span>
+<div class="options">
+<label><input type="radio" name="q88" value="A"> A) Physical security</label>
+<label><input type="radio" name="q88" value="B"> B) Surveillance</label>
+<label><input type="radio" name="q88" value="C"> C) Aggressive law enforcement presence</label>
+<label><input type="radio" name="q88" value="D"> D) Movement control</label>
+</div></div>
+
+<div class="question"><span class="qnum">89.</span> <span class="qtext">Proper lighting around a facility is one of the most cost-effective physical security deterrents available.</span>
+<div class="tf-options">
+<label><input type="radio" name="q89" value="T"> True</label>
+<label><input type="radio" name="q89" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">90.</span> <span class="qtext">CPTED principles focus primarily on aggressive law enforcement responses to reduce crime.</span>
+<div class="tf-options">
+<label><input type="radio" name="q90" value="T"> True</label>
+<label><input type="radio" name="q90" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 10 ============ -->
+<div class="chapter-header">CHAPTER 10 — Interviewing Techniques</div>
+<div class="chapter-sub">Topics: Interview vs. Interrogation, Miranda Warnings, Rapport Building</div>
+
+<div class="question"><span class="qnum">91.</span> <span class="qtext">What is the key difference between an interview and an interrogation?</span>
+<div class="options">
+<label><input type="radio" name="q91" value="A"> A) Interviews are always longer than interrogations</label>
+<label><input type="radio" name="q91" value="B"> B) Interviews are voluntary information gathering; interrogations are accusatory and aim to obtain a confession</label>
+<label><input type="radio" name="q91" value="C"> C) Interrogations are conducted only by law enforcement, never by private security</label>
+<label><input type="radio" name="q91" value="D"> D) Interviews require an attorney to be present; interrogations do not</label>
+</div></div>
+
+<div class="question"><span class="qnum">92.</span> <span class="qtext">Miranda warnings are required:</span>
+<div class="options">
+<label><input type="radio" name="q92" value="A"> A) Before every security interview, regardless of the circumstances</label>
+<label><input type="radio" name="q92" value="B"> B) Only if the suspect is in custody during an interrogation</label>
+<label><input type="radio" name="q92" value="C"> C) Never, since Miranda only applies to law enforcement, never to private security</label>
+<label><input type="radio" name="q92" value="D"> D) At the beginning of every questioning session conducted by security</label>
+</div></div>
+
+<div class="question"><span class="qnum">93.</span> <span class="qtext">An interrogation is designed to gather information voluntarily without any accusations being made.</span>
+<div class="tf-options">
+<label><input type="radio" name="q93" value="T"> True</label>
+<label><input type="radio" name="q93" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">94.</span> <span class="qtext">Building rapport with an interviewee makes it easier to obtain useful information during the questioning process.</span>
+<div class="tf-options">
+<label><input type="radio" name="q94" value="T"> True</label>
+<label><input type="radio" name="q94" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 11 ============ -->
+<div class="chapter-header">CHAPTER 11 — Emergency Operations</div>
+<div class="chapter-sub">Topics: Floods, Hurricanes, Bomb Threats, Fires, Chemical Spills, Evacuation Procedures</div>
+
+<div class="question"><span class="qnum">95.</span> <span class="qtext">During a flood emergency, what is the security officer's order of priority?</span>
+<div class="options">
+<label><input type="radio" name="q95" value="A"> A) Secure immovable assets first, then personnel</label>
+<label><input type="radio" name="q95" value="B"> B) Protect confidential documents first, then civilians</label>
+<label><input type="radio" name="q95" value="C"> C) Civilians first, then confidential documents, then other assets</label>
+<label><input type="radio" name="q95" value="D"> D) Electronic equipment first to prevent data loss, then personnel</label>
+</div></div>
+
+<div class="question"><span class="qnum">96.</span> <span class="qtext">When a bomb threat is received by phone, a security officer should:</span>
+<div class="options">
+<label><input type="radio" name="q96" value="A"> A) Hang up immediately and call the police</label>
+<label><input type="radio" name="q96" value="B"> B) Keep the caller on the line as long as possible, record the call if possible, and notify a supervisor</label>
+<label><input type="radio" name="q96" value="C"> C) Attempt to personally locate the bomb before evacuating</label>
+<label><input type="radio" name="q96" value="D"> D) Evacuate the building immediately before notifying anyone</label>
+</div></div>
+
+<div class="question"><span class="qnum">97.</span> <span class="qtext">During a fire evacuation, building occupants should:</span>
+<div class="options">
+<label><input type="radio" name="q97" value="A"> A) Use elevators to reach the ground floor faster during evacuation</label>
+<label><input type="radio" name="q97" value="B"> B) Use the stairs, never the elevators, and move in a controlled, orderly manner</label>
+<label><input type="radio" name="q97" value="C"> C) Remain at their desks until fire alarms stop ringing</label>
+<label><input type="radio" name="q97" value="D"> D) Return to the building after initial evacuation to retrieve important personal belongings</label>
+</div></div>
+
+<div class="question"><span class="qnum">98.</span> <span class="qtext">If there is a chemical spill on the premises, the security officer's first responsibility is to:</span>
+<div class="options">
+<label><input type="radio" name="q98" value="A"> A) Attempt to personally clean up the spill to prevent spread</label>
+<label><input type="radio" name="q98" value="B"> B) Immediately inform a supervisor and determine whether evacuation is necessary</label>
+<label><input type="radio" name="q98" value="C"> C) Wait for the responsible individual to clean up the spill</label>
+<label><input type="radio" name="q98" value="D"> D) Seal the room with tape to contain the chemical</label>
+</div></div>
+
+<div class="question"><span class="qnum">99.</span> <span class="qtext">During a hurricane, when should property occupants ideally be evacuated?</span>
+<div class="options">
+<label><input type="radio" name="q99" value="A"> A) Only when the hurricane makes direct landfall</label>
+<label><input type="radio" name="q99" value="B"> B) Long before the hurricane is within 50–200 miles of the property</label>
+<label><input type="radio" name="q99" value="C"> C) When windows begin to crack or break from wind pressure</label>
+<label><input type="radio" name="q99" value="D"> D) Only after the property loses electrical power</label>
+</div></div>
+
+<div class="question"><span class="qnum">100.</span> <span class="qtext">According to Florida Statute 877.15, when is a person obligated to report a dangerous fire?</span>
+<div class="options">
+<label><input type="radio" name="q100" value="A"> A) Only trained firefighters are legally required to report fires</label>
+<label><input type="radio" name="q100" value="B"> B) When they have reasonable grounds to believe a fire endangers life or property, provided they can do so without substantial personal risk</label>
+<label><input type="radio" name="q100" value="C"> C) Only when directly instructed to report by their supervisor</label>
+<label><input type="radio" name="q100" value="D"> D) Only after they have attempted to extinguish the fire themselves</label>
+</div></div>
+
+<div class="question"><span class="qnum">101.</span> <span class="qtext">Security officers may use physical force to evacuate individuals who refuse to leave a property during a hurricane.</span>
+<div class="tf-options">
+<label><input type="radio" name="q101" value="T"> True</label>
+<label><input type="radio" name="q101" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">102.</span> <span class="qtext">During a flood emergency, securing electronic equipment takes priority over evacuating civilians.</span>
+<div class="tf-options">
+<label><input type="radio" name="q102" value="T"> True</label>
+<label><input type="radio" name="q102" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">103.</span> <span class="qtext">If a security officer discovers someone with arsonistic intentions, the officer should immediately attempt to apprehend that individual.</span>
+<div class="tf-options">
+<label><input type="radio" name="q103" value="T"> True</label>
+<label><input type="radio" name="q103" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">104.</span> <span class="qtext">After an emergency, security officers should re-enter the building as quickly as possible to assess damage.</span>
+<div class="tf-options">
+<label><input type="radio" name="q104" value="T"> True</label>
+<label><input type="radio" name="q104" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">105.</span> <span class="qtext">When a bomb threat is received, the security officer\'s top priority is to apprehend the caller before initiating evacuation.</span>
+<div class="tf-options">
+<label><input type="radio" name="q105" value="T"> True</label>
+<label><input type="radio" name="q105" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">106.</span> <span class="qtext">Before a fire, it is often a security officer\'s responsibility to ensure fire extinguishers, sprinkler systems, and other fire mitigation equipment are working properly.</span>
+<div class="tf-options">
+<label><input type="radio" name="q106" value="T"> True</label>
+<label><input type="radio" name="q106" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 12 ============ -->
+<div class="chapter-header">CHAPTER 12 — Safety Awareness, Fire Prevention, and Hazardous Materials</div>
+<div class="chapter-sub">Topics: Safety Awareness, OSHA, NFPA, Life Safety Code, Means of Egress, Hazardous Materials Classification, Workplace Hazards</div>
+
+<div class="question"><span class="qnum">107.</span> <span class="qtext">What is the NFPA's primary organizational goal?</span>
+<div class="options">
+<label><input type="radio" name="q107" value="A"> A) To license and certify firefighters at the national level</label>
+<label><input type="radio" name="q107" value="B"> B) To eliminate the risk of death, injury, and economic loss due to fire hazards in residential, commercial, and industrial properties</label>
+<label><input type="radio" name="q107" value="C"> C) To regulate building construction codes and issue building permits</label>
+<label><input type="radio" name="q107" value="D"> D) To train and certify security officers in fire suppression techniques</label>
+</div></div>
+
+<div class="question"><span class="qnum">108.</span> <span class="qtext">How many recognized classes of hazardous goods are identified according to NFPA classification?</span>
+<div class="options">
+<label><input type="radio" name="q108" value="A"> A) Six</label>
+<label><input type="radio" name="q108" value="B"> B) Seven</label>
+<label><input type="radio" name="q108" value="C"> C) Nine</label>
+<label><input type="radio" name="q108" value="D"> D) Twelve</label>
+</div></div>
+
+<div class="question"><span class="qnum">109.</span> <span class="qtext">Under NFPA hazardous materials classification, Class 3 refers to:</span>
+<div class="options">
+<label><input type="radio" name="q109" value="A"> A) Explosives</label>
+<label><input type="radio" name="q109" value="B"> B) Gases</label>
+<label><input type="radio" name="q109" value="C"> C) Flammable liquids</label>
+<label><input type="radio" name="q109" value="D"> D) Flammable solids</label>
+</div></div>
+
+<div class="question"><span class="qnum">110.</span> <span class="qtext">According to Florida Section 877.15, F.S., when a fire is endangering occupants, a person is responsible for notifying authorities:</span>
+<div class="options">
+<label><input type="radio" name="q110" value="A"> A) Only if they hold a formal fire safety officer designation</label>
+<label><input type="radio" name="q110" value="B"> B) Provided they can do so without substantial risk to their own life</label>
+<label><input type="radio" name="q110" value="C"> C) Only after exhausting all personal fire extinguishing options first</label>
+<label><input type="radio" name="q110" value="D"> D) Only when specifically directed to do so by their supervisor</label>
+</div></div>
+
+<div class="question"><span class="qnum">111.</span> <span class="qtext">OSHA labels must include a "signal word" which:</span>
+<div class="options">
+<label><input type="radio" name="q111" value="A"> A) Lists the owner's name and insurance policy number for the hazard</label>
+<label><input type="radio" name="q111" value="B"> B) Indicates the presence of severe hazards at a site or on a product</label>
+<label><input type="radio" name="q111" value="C"> C) Provides the OSHA inspector's direct contact information</label>
+<label><input type="radio" name="q111" value="D"> D) Records the date the hazardous material was installed or placed</label>
+</div></div>
+
+<div class="question"><span class="qnum">112.</span> <span class="qtext">When placing emergency equipment at a security site, the primary focus should be:</span>
+<div class="options">
+<label><input type="radio" name="q112" value="A"> A) Equipment that allows occupants to fight and defeat any intruder threat</label>
+<label><input type="radio" name="q112" value="B"> B) Equipment that helps occupants escape rather than fight the hazard</label>
+<label><input type="radio" name="q112" value="C"> C) Equipment that is aesthetically integrated and unobtrusive</label>
+<label><input type="radio" name="q112" value="D"> D) Only equipment that has been approved by local law enforcement</label>
+</div></div>
+
+<div class="question"><span class="qnum">113.</span> <span class="qtext">The Life Safety Code (NFPA 101) is revised every five years.</span>
+<div class="tf-options">
+<label><input type="radio" name="q113" value="T"> True</label>
+<label><input type="radio" name="q113" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">114.</span> <span class="qtext">Class 1 hazardous materials under NFPA classification are explosives.</span>
+<div class="tf-options">
+<label><input type="radio" name="q114" value="T"> True</label>
+<label><input type="radio" name="q114" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">115.</span> <span class="qtext">OSHA hazard labels use pictograms displayed inside green circles to represent physical health hazards.</span>
+<div class="tf-options">
+<label><input type="radio" name="q115" value="T"> True</label>
+<label><input type="radio" name="q115" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">116.</span> <span class="qtext">When a chemical spill occurs, a security officer should personally attempt to clean it up to stop it from spreading.</span>
+<div class="tf-options">
+<label><input type="radio" name="q116" value="T"> True</label>
+<label><input type="radio" name="q116" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">117.</span> <span class="qtext">A biohazard is any biological hazardous material that can threaten human and animal health.</span>
+<div class="tf-options">
+<label><input type="radio" name="q117" value="T"> True</label>
+<label><input type="radio" name="q117" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 13 ============ -->
+<div class="chapter-header">CHAPTER 13 — Medical Emergencies</div>
+<div class="chapter-sub">Topics: Florida Good Samaritan Act, First Aid Awareness, CPR, AED Use, Bloodborne Pathogens</div>
+
+<div class="question"><span class="qnum">118.</span> <span class="qtext">According to the Florida Good Samaritan Act, when a security officer begins assisting a person in a medical emergency, they:</span>
+<div class="options">
+<label><input type="radio" name="q118" value="A"> A) Are automatically and completely released from any liability</label>
+<label><input type="radio" name="q118" value="B"> B) Create a duty to exercise due care at all times while providing that assistance</label>
+<label><input type="radio" name="q118" value="C"> C) Must provide medical treatment equivalent to a licensed nurse</label>
+<label><input type="radio" name="q118" value="D"> D) May stop helping at any time without any legal consequence</label>
+</div></div>
+
+<div class="question"><span class="qnum">119.</span> <span class="qtext">In the context of the Florida Good Samaritan Act, "reckless disregard" means:</span>
+<div class="options">
+<label><input type="radio" name="q119" value="A"> A) Any honest mistake made while providing emergency assistance</label>
+<label><input type="radio" name="q119" value="B"> B) When the helper knew or should have known of a risk of injury but acted in a way that disregarded that risk anyway</label>
+<label><input type="radio" name="q119" value="C"> C) A refusal to help someone in a medical emergency</label>
+<label><input type="radio" name="q119" value="D"> D) Acting too quickly in an emergency situation</label>
+</div></div>
+
+<div class="question"><span class="qnum">120.</span> <span class="qtext">What is the primary duty of an unarmed security officer when encountering a medical emergency?</span>
+<div class="options">
+<label><input type="radio" name="q120" value="A"> A) Administer medical treatment immediately using available supplies</label>
+<label><input type="radio" name="q120" value="B"> B) Call 911 immediately, secure the scene, protect life, and provide basic support until professional help arrives</label>
+<label><input type="radio" name="q120" value="C"> C) Perform CPR on every person who is unconscious</label>
+<label><input type="radio" name="q120" value="D"> D) Diagnose the victim's specific medical condition before calling for help</label>
+</div></div>
+
+<div class="question"><span class="qnum">121.</span> <span class="qtext">In the ABCDE primary assessment method, "D" stands for:</span>
+<div class="options">
+<label><input type="radio" name="q121" value="A"> A) Defibrillate</label>
+<label><input type="radio" name="q121" value="B"> B) Document</label>
+<label><input type="radio" name="q121" value="C"> C) Disability (Mental Status)</label>
+<label><input type="radio" name="q121" value="D"> D) Dispatch</label>
+</div></div>
+
+<div class="question"><span class="qnum">122.</span> <span class="qtext">An AED should be used when:</span>
+<div class="options">
+<label><input type="radio" name="q122" value="A"> A) A person appears to be in physical pain</label>
+<label><input type="radio" name="q122" value="B"> B) A person is unresponsive and not breathing normally (signs of cardiac arrest)</label>
+<label><input type="radio" name="q122" value="C"> C) Any unconscious patient, regardless of breathing status</label>
+<label><input type="radio" name="q122" value="D"> D) Only by certified EMTs and paramedics</label>
+</div></div>
+
+<div class="question"><span class="qnum">123.</span> <span class="qtext">When providing a 911 report during a medical emergency, a security officer should include:</span>
+<div class="options">
+<label><input type="radio" name="q123" value="A"> A) Only the victim's name and insurance information</label>
+<label><input type="radio" name="q123" value="B"> B) Exact location and best entry point, what happened, number of victims, whether conscious/breathing, and any hazards</label>
+<label><input type="radio" name="q123" value="C"> C) Only the type of visible injury</label>
+<label><input type="radio" name="q123" value="D"> D) A brief verbal description only, with a written report filed at end of shift</label>
+</div></div>
+
+<div class="question"><span class="qnum">124.</span> <span class="qtext">Bloodborne pathogen precautions require a security officer to:</span>
+<div class="options">
+<label><input type="radio" name="q124" value="A"> A) Avoid all contact with any person who appears to be ill</label>
+<label><input type="radio" name="q124" value="B"> B) Treat all bodily fluids as potentially infectious, use gloves or barriers when available, and wash hands after the incident</label>
+<label><input type="radio" name="q124" value="C"> C) Wear a full hazmat suit whenever a medical call occurs</label>
+<label><input type="radio" name="q124" value="D"> D) Leave the scene entirely to avoid contamination risk</label>
+</div></div>
+
+<div class="question"><span class="qnum">125.</span> <span class="qtext">The Florida Good Samaritan Act provides complete immunity to anyone who assists in a medical emergency, regardless of how they provide that assistance.</span>
+<div class="tf-options">
+<label><input type="radio" name="q125" value="T"> True</label>
+<label><input type="radio" name="q125" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">126.</span> <span class="qtext">An unarmed security officer holding a Class \'D\' license is authorized to perform medical procedures equivalent to those of a licensed nurse.</span>
+<div class="tf-options">
+<label><input type="radio" name="q126" value="T"> True</label>
+<label><input type="radio" name="q126" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">127.</span> <span class="qtext">Universal precautions require treating all bodily fluids as potentially infectious.</span>
+<div class="tf-options">
+<label><input type="radio" name="q127" value="T"> True</label>
+<label><input type="radio" name="q127" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">128.</span> <span class="qtext">An AED should be used on any unconscious person, regardless of whether they show signs of cardiac arrest.</span>
+<div class="tf-options">
+<label><input type="radio" name="q128" value="T"> True</label>
+<label><input type="radio" name="q128" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">129.</span> <span class="qtext">A security officer should wait until they have gathered all the facts before calling 911 during a medical emergency.</span>
+<div class="tf-options">
+<label><input type="radio" name="q129" value="T"> True</label>
+<label><input type="radio" name="q129" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">130.</span> <span class="qtext">A security officer who applies Naloxone (Narcan) during a drug overdose emergency may be protected under the Florida Good Samaritan Act.</span>
+<div class="tf-options">
+<label><input type="radio" name="q130" value="T"> True</label>
+<label><input type="radio" name="q130" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 14 ============ -->
+<div class="chapter-header">CHAPTER 14 — Terrorism Awareness</div>
+<div class="chapter-sub">Topics: Definition and History of Terrorism, FBI/UN Definitions, DHS "If You See Something", Suspicious Activity</div>
+
+<div class="question"><span class="qnum">131.</span> <span class="qtext">The FBI defines terrorism as:</span>
+<div class="options">
+<label><input type="radio" name="q131" value="A"> A) Any act of violence directed at a government building or official</label>
+<label><input type="radio" name="q131" value="B"> B) The unlawful use of force or violence against persons or property to intimidate or coerce a Government, civilian population, or any segment thereof, in furtherance of political or social objectives</label>
+<label><input type="radio" name="q131" value="C"> C) Any act of civil disobedience that disrupts normal operations</label>
+<label><input type="radio" name="q131" value="D"> D) Violent acts committed only by foreign nationals against U.S. citizens</label>
+</div></div>
+
+<div class="question"><span class="qnum">132.</span> <span class="qtext">What is the recommended mindset for unarmed security officers when dealing with suspected terrorism threats?</span>
+<div class="options">
+<label><input type="radio" name="q132" value="A"> A) Tactical engagement and active pursuit of suspects</label>
+<label><input type="radio" name="q132" value="B"> B) A defensive strategy focused on observe/report, scene control, and life safety</label>
+<label><input type="radio" name="q132" value="C"> C) Ignoring threats unless they directly affect their own assigned post</label>
+<label><input type="radio" name="q132" value="D"> D) Acting independently to neutralize threats before law enforcement arrives</label>
+</div></div>
+
+<div class="question"><span class="qnum">133.</span> <span class="qtext">The DHS "If You See Something, Say Something™" campaign was launched in:</span>
+<div class="options">
+<label><input type="radio" name="q133" value="A"> A) September 2001</label>
+<label><input type="radio" name="q133" value="B"> B) January 2005</label>
+<label><input type="radio" name="q133" value="C"> C) July 2010</label>
+<label><input type="radio" name="q133" value="D"> D) March 2015</label>
+</div></div>
+
+<div class="question"><span class="qnum">134.</span> <span class="qtext">Security officers should base decisions about reporting suspicious activity on:</span>
+<div class="options">
+<label><input type="radio" name="q134" value="A"> A) The race, ethnicity, or religion of the person observed</label>
+<label><input type="radio" name="q134" value="B"> B) Observable behaviors and credible circumstances, not personal characteristics</label>
+<label><input type="radio" name="q134" value="C"> C) Their personal instinct about who looks suspicious based on appearance</label>
+<label><input type="radio" name="q134" value="D"> D) Instructions from supervisors only, never their own observations</label>
+</div></div>
+
+<div class="question"><span class="qnum">135.</span> <span class="qtext">Which of the following is an example of suspicious activity that should be reported?</span>
+<div class="options">
+<label><input type="radio" name="q135" value="A"> A) A person waiting at a bus stop on the sidewalk</label>
+<label><input type="radio" name="q135" value="B"> B) An employee eating lunch near an emergency exit</label>
+<label><input type="radio" name="q135" value="C"> C) An unattended backpack left near a crowded entrance in an unusual manner</label>
+<label><input type="radio" name="q135" value="D"> D) A visitor asking for directions to the building directory</label>
+</div></div>
+
+<div class="question"><span class="qnum">136.</span> <span class="qtext">What should a security officer do if they discover a suspicious unattended package?</span>
+<div class="options">
+<label><input type="radio" name="q136" value="A"> A) Pick it up and move it to a safe, isolated location</label>
+<label><input type="radio" name="q136" value="B"> B) Do not touch it; secure the area, notify supervision, and call 911 per policy</label>
+<label><input type="radio" name="q136" value="C"> C) Carefully open the package to identify and verify the contents</label>
+<label><input type="radio" name="q136" value="D"> D) Ignore it unless multiple other people also report feeling unsafe</label>
+</div></div>
+
+<div class="question"><span class="qnum">137.</span> <span class="qtext">The term \'terrorism\' is commonly traced to the late 1700s and was first used during political conflict in France.</span>
+<div class="tf-options">
+<label><input type="radio" name="q137" value="T"> True</label>
+<label><input type="radio" name="q137" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">138.</span> <span class="qtext">Security officers should profile individuals based on their race, ethnicity, or religion when assessing potential terrorism threats.</span>
+<div class="tf-options">
+<label><input type="radio" name="q138" value="T"> True</label>
+<label><input type="radio" name="q138" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">139.</span> <span class="qtext">CBRNE stands for Chemical, Biological, Radiological, Nuclear, and Explosive.</span>
+<div class="tf-options">
+<label><input type="radio" name="q139" value="T"> True</label>
+<label><input type="radio" name="q139" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">140.</span> <span class="qtext">Secondary explosive devices are sometimes placed in areas where first responders and bystanders tend to gather after an initial incident.</span>
+<div class="tf-options">
+<label><input type="radio" name="q140" value="T"> True</label>
+<label><input type="radio" name="q140" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">141.</span> <span class="qtext">The FBI\'s definition of terrorism includes acts intended to coerce a government or civilian population in furtherance of political or social objectives.</span>
+<div class="tf-options">
+<label><input type="radio" name="q141" value="T"> True</label>
+<label><input type="radio" name="q141" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 15 ============ -->
+<div class="chapter-header">CHAPTER 15 — Traffic Control and Crowd Management</div>
+<div class="chapter-sub">Topics: Vehicle &amp; Pedestrian Control, Crowd Types, Crowd Control Techniques</div>
+
+<div class="question"><span class="qnum">142.</span> <span class="qtext">Private security officers have the authority to:</span>
+<div class="options">
+<label><input type="radio" name="q142" value="A"> A) Arrest persons in suspicious vehicles on public streets adjacent to an event</label>
+<label><input type="radio" name="q142" value="B"> B) Restrict all pedestrian movement in public areas near an event</label>
+<label><input type="radio" name="q142" value="C"> C) Deny entry to vehicles and pedestrians they believe may pose a threat to others on private property</label>
+<label><input type="radio" name="q142" value="D"> D) Issue traffic citations and moving violations on private property</label>
+</div></div>
+
+<div class="question"><span class="qnum">143.</span> <span class="qtext">The three primary crowd control techniques used by security officers are:</span>
+<div class="options">
+<label><input type="radio" name="q143" value="A"> A) Firearms, pepper spray, and rubber bullets</label>
+<label><input type="radio" name="q143" value="B"> B) Physical barriers, verbal commands, and detention as a last resort</label>
+<label><input type="radio" name="q143" value="C"> C) Arrest, physical restraint, and taser deployment</label>
+<label><input type="radio" name="q143" value="D"> D) Surveillance, documentation, and reporting</label>
+</div></div>
+
+<div class="question"><span class="qnum">144.</span> <span class="qtext">Security officers assigned to an event must be familiar with the event agenda, site layout, and the security plan and post orders.</span>
+<div class="tf-options">
+<label><input type="radio" name="q144" value="T"> True</label>
+<label><input type="radio" name="q144" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">145.</span> <span class="qtext">Private security officers have the authority to issue traffic citations to vehicles parked illegally on public streets near an event site.</span>
+<div class="tf-options">
+<label><input type="radio" name="q145" value="T"> True</label>
+<label><input type="radio" name="q145" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 16 ============ -->
+<div class="chapter-header">CHAPTER 16 — Communications Systems</div>
+<div class="chapter-sub">Topics: Two-Way Radio Communication, Digital vs. Analog Radios, Radio Etiquette, Telephone Systems, PAS, Intercoms, Phonetic Alphabet, 10-Codes</div>
+
+<div class="question"><span class="qnum">146.</span> <span class="qtext">Two-way radio communication used in security operations is also called:</span>
+<div class="options">
+<label><input type="radio" name="q146" value="A"> A) Push-to-listen (PTL) communication</label>
+<label><input type="radio" name="q146" value="B"> B) Push-to-talk (PTT) communication</label>
+<label><input type="radio" name="q146" value="C"> C) Digital frequency modulation (DFM)</label>
+<label><input type="radio" name="q146" value="D"> D) Analog voice transfer (AVT)</label>
+</div></div>
+
+<div class="question"><span class="qnum">147.</span> <span class="qtext">What is the correct order to begin a radio transmission?</span>
+<div class="options">
+<label><input type="radio" name="q147" value="A"> A) State your location, then your identification, then your message</label>
+<label><input type="radio" name="q147" value="B"> B) State the name of the person you are contacting first, then your own identification</label>
+<label><input type="radio" name="q147" value="C"> C) State your full message first, then identify yourself at the end</label>
+<label><input type="radio" name="q147" value="D"> D) State the current time, then your identification, then the message</label>
+</div></div>
+
+<div class="question"><span class="qnum">148.</span> <span class="qtext">The NATO phonetic alphabet is also known as the International Radiotelephony Spelling Alphabet (IRSA).</span>
+<div class="tf-options">
+<label><input type="radio" name="q148" value="T"> True</label>
+<label><input type="radio" name="q148" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">149.</span> <span class="qtext">The radio 10-code \'10-4\' means \'Emergency — request immediate assistance.\'</span>
+<div class="tf-options">
+<label><input type="radio" name="q149" value="T"> True</label>
+<label><input type="radio" name="q149" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 17 ============ -->
+<div class="chapter-header">CHAPTER 17 — Special Issues</div>
+<div class="chapter-sub">Topics: Unique Behavior, Persons with Disabilities, Elderly, Juveniles, Homeless, Drugs/Alcohol, Disruptive People, Workplace Violence, Active Shooter, Gangs</div>
+
+<div class="question"><span class="qnum">150.</span> <span class="qtext">What is the primary goal of an unarmed security officer when dealing with a person exhibiting unique or disruptive behavior?</span>
+<div class="options">
+<label><input type="radio" name="q150" value="A"> A) Arrest the person immediately to protect the public</label>
+<label><input type="radio" name="q150" value="B"> B) Reduce risk, prevent escalation, and keep the environment safe using communication and de-escalation</label>
+<label><input type="radio" name="q150" value="C"> C) Confront the person directly and establish authority as quickly as possible</label>
+<label><input type="radio" name="q150" value="D"> D) Call law enforcement immediately without attempting any communication</label>
+</div></div>
+
+<div class="question"><span class="qnum">151.</span> <span class="qtext">When interacting with a person experiencing a possible mental health crisis, a security officer should:</span>
+<div class="options">
+<label><input type="radio" name="q151" value="A"> A) Argue with them to help bring them back to reality</label>
+<label><input type="radio" name="q151" value="B"> B) Stay calm, give space, avoid sudden movements, use a respectful tone, and offer simple options rather than threats</label>
+<label><input type="radio" name="q151" value="C"> C) Physically restrain them immediately to prevent potential harm</label>
+<label><input type="radio" name="q151" value="D"> D) Ignore the behavior unless a law is actively being broken</label>
+</div></div>
+
+<div class="question"><span class="qnum">152.</span> <span class="qtext">A person with a developmental disability may exhibit which of the following behaviors?</span>
+<div class="options">
+<label><input type="radio" name="q152" value="A"> A) Rapid speech, excessive eye contact, and high-energy social interaction</label>
+<label><input type="radio" name="q152" value="B"> B) Repetitive movements, sensitivity to noise or crowds, and anxiety when routines change</label>
+<label><input type="radio" name="q152" value="C"> C) Constant aggression and unpredictable violent behavior</label>
+<label><input type="radio" name="q152" value="D"> D) Always requiring immediate law enforcement intervention</label>
+</div></div>
+
+<div class="question"><span class="qnum">153.</span> <span class="qtext">In the DHS Run, Hide, Fight active shooter response model, "Run" means:</span>
+<div class="options">
+<label><input type="radio" name="q153" value="A"> A) Run toward the shooter to neutralize the threat</label>
+<label><input type="radio" name="q153" value="B"> B) Evacuate immediately using the safest available route if it is safe to do so</label>
+<label><input type="radio" name="q153" value="C"> C) Run to the nearest phone and call your supervisor before calling 911</label>
+<label><input type="radio" name="q153" value="D"> D) Run to a defensive barrier position and prepare to fight</label>
+</div></div>
+
+<div class="question"><span class="qnum">154.</span> <span class="qtext">Workplace violence Type IV involves:</span>
+<div class="options">
+<label><input type="radio" name="q154" value="A"> A) Criminal intent by a stranger with no relationship to the business</label>
+<label><input type="radio" name="q154" value="B"> B) Violence directed at employees by someone receiving services</label>
+<label><input type="radio" name="q154" value="C"> C) Violence between current employees</label>
+<label><input type="radio" name="q154" value="D"> D) Violence spilling into the workplace from a personal/domestic relationship</label>
+</div></div>
+
+<div class="question"><span class="qnum">155.</span> <span class="qtext">When dealing with a person who may be under the influence of drugs or alcohol, a security officer should:</span>
+<div class="options">
+<label><input type="radio" name="q155" value="A"> A) Immediately tell the person "You are drunk/high" to establish the basis for the report</label>
+<label><input type="radio" name="q155" value="B"> B) Focus on observable behavior and safety risks rather than diagnosing the specific substance used</label>
+<label><input type="radio" name="q155" value="C"> C) Physically restrain the person immediately to prevent any potential injury</label>
+<label><input type="radio" name="q155" value="D"> D) Ignore the behavior entirely unless active violence occurs</label>
+</div></div>
+
+<div class="question"><span class="qnum">156.</span> <span class="qtext">The quick threat assessment used to evaluate a potentially violent person asks about:</span>
+<div class="options">
+<label><input type="radio" name="q156" value="A"> A) Race, Gender, and Age of the person involved</label>
+<label><input type="radio" name="q156" value="B"> B) Means (weapon/access to harm), Opportunity (proximity), and Intent (threats/targeting/escalating)</label>
+<label><input type="radio" name="q156" value="C"> C) Location, Time of day, and Distance from your post</label>
+<label><input type="radio" name="q156" value="D"> D) Speed of movement, Direction of travel, and Force already applied</label>
+</div></div>
+
+<div class="question"><span class="qnum">157.</span> <span class="qtext">A "defensible use of force" for security officers must be:</span>
+<div class="options">
+<label><input type="radio" name="q157" value="A"> A) Any use of force verbally authorized by the employer at the time</label>
+<label><input type="radio" name="q157" value="B"> B) Reasonable, necessary to stop the behavior, proportionate to the threat, and stopped once the threat ends</label>
+<label><input type="radio" name="q157" value="C"> C) Only force levels specifically pre-approved by law enforcement</label>
+<label><input type="radio" name="q157" value="D"> D) Any force that is documented in a written report within 24 hours</label>
+</div></div>
+
+<div class="question"><span class="qnum">158.</span> <span class="qtext">Which of the following is a reportable indicator of possible gang activity at a security post?</span>
+<div class="options">
+<label><input type="radio" name="q158" value="A"> A) A group of people walking quietly through the parking lot toward the entrance</label>
+<label><input type="radio" name="q158" value="B"> B) Group intimidation or threats, coordinated shoplifting/distraction tactics, or graffiti/tagging on property</label>
+<label><input type="radio" name="q158" value="C"> C) Employees arriving together in a carpool wearing matching company uniforms</label>
+<label><input type="radio" name="q158" value="D"> D) Visitors asking for directions to a specific department</label>
+</div></div>
+
+<div class="question"><span class="qnum">159.</span> <span class="qtext">A security officer should mirror an aggressive person\'s tone and volume in order to establish authority during a confrontation.</span>
+<div class="tf-options">
+<label><input type="radio" name="q159" value="T"> True</label>
+<label><input type="radio" name="q159" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">160.</span> <span class="qtext">In the DHS Run, Hide, Fight model, \'Fight\' should be the first option a security officer considers during an active shooter event.</span>
+<div class="tf-options">
+<label><input type="radio" name="q160" value="T"> True</label>
+<label><input type="radio" name="q160" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">161.</span> <span class="qtext">People with mental illness are statistically more likely to be victims of crime than perpetrators of crime.</span>
+<div class="tf-options">
+<label><input type="radio" name="q161" value="T"> True</label>
+<label><input type="radio" name="q161" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">162.</span> <span class="qtext">If an elderly person falls, a security officer\'s first action should be to immediately lift them to their feet to restore their dignity.</span>
+<div class="tf-options">
+<label><input type="radio" name="q162" value="T"> True</label>
+<label><input type="radio" name="q162" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">163.</span> <span class="qtext">In a hostage situation, an unarmed security officer\'s first action should be to negotiate directly with the captor.</span>
+<div class="tf-options">
+<label><input type="radio" name="q163" value="T"> True</label>
+<label><input type="radio" name="q163" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">164.</span> <span class="qtext">Workplace violence prevention is the sole responsibility of the security department and not of other employees or management.</span>
+<div class="tf-options">
+<label><input type="radio" name="q164" value="T"> True</label>
+<label><input type="radio" name="q164" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">165.</span> <span class="qtext">When documenting gang-related activity, security officers should describe specific observable behaviors rather than applying unproven labels.</span>
+<div class="tf-options">
+<label><input type="radio" name="q165" value="T"> True</label>
+<label><input type="radio" name="q165" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">166.</span> <span class="qtext">When dealing with a person suspected of substance impairment, a security officer should diagnose the specific drug used in their incident report.</span>
+<div class="tf-options">
+<label><input type="radio" name="q166" value="T"> True</label>
+<label><input type="radio" name="q166" value="F"> False</label>
+</div></div>
+
+<!-- ============ CHAPTER 18 ============ -->
+<div class="chapter-header">CHAPTER 18 — Introduction to Weapons</div>
+<div class="chapter-sub">Topics: Less-Lethal Tools (OC/Baton/ECD), Universal Firearm Safety Rules, Semi-Auto Handgun vs. Revolver, Firearm Found on Duty</div>
+
+<div class="question"><span class="qnum">167.</span> <span class="qtext">Why is "less-lethal" a more accurate term than "non-lethal" for tools like OC spray, batons, and ECDs?</span>
+<div class="options">
+<label><input type="radio" name="q167" value="A"> A) Because Florida law requires use of the term "less-lethal" in all training materials</label>
+<label><input type="radio" name="q167" value="B"> B) Because even these tools can cause serious injury or death depending on use, targeting, distance, and the subject's medical condition</label>
+<label><input type="radio" name="q167" value="C"> C) Because these tools are always safer than any firearm in any situation</label>
+<label><input type="radio" name="q167" value="D"> D) Because they can only be used by trained law enforcement officers, not security</label>
+</div></div>
+
+<div class="question"><span class="qnum">168.</span> <span class="qtext">The four universal firearm safety rules are: treat every firearm as loaded; never point at anything you are not willing to destroy; keep your finger off the trigger until ready to shoot; and:</span>
+<div class="options">
+<label><input type="radio" name="q168" value="A"> A) Always keep the safety engaged until the last possible moment</label>
+<label><input type="radio" name="q168" value="B"> B) Know your target and what is beyond it</label>
+<label><input type="radio" name="q168" value="C"> C) Unload the firearm when not in use</label>
+<label><input type="radio" name="q168" value="D"> D) Store ammunition separately from the firearm at all times</label>
+</div></div>
+
+<div class="question"><span class="qnum">169.</span> <span class="qtext">Removing the magazine from a semi-automatic handgun means the firearm is completely unloaded and safe to handle.</span>
+<div class="tf-options">
+<label><input type="radio" name="q169" value="T"> True</label>
+<label><input type="radio" name="q169" value="F"> False</label>
+</div></div>
+
+<div class="question"><span class="qnum">170.</span> <span class="qtext">Less-lethal tools such as OC spray, batons, and ECDs can still cause serious injury or death if used improperly.</span>
+<div class="tf-options">
+<label><input type="radio" name="q170" value="T"> True</label>
+<label><input type="radio" name="q170" value="F"> False</label>
+</div></div>
+
+<!-- SUBMIT BUTTON -->
+<hr class="exam-end-divider">
+<div class="submit-area">
+  <div class="submit-title">You Have Reached the End of the Examination</div>
+  <div class="submit-divider"></div>
+  <div class="submit-note">
+    Please review your answers before submitting.<br>
+    <strong>Online Students:</strong> Click the button below. Your score will appear immediately and your results will be sent directly to your instructor.<br>
+    <strong>In-Person Students:</strong> Raise your hand to notify your instructor. Do not click Submit.
+  </div>
+  <button type="submit" class="submit-btn">SUBMIT MY EXAM</button>
+</div>
+
+<div id="resultBox" class="result-box" style="display:none;"></div>
+
+</form>
+
+<div class="confirm-screen" id="confirmScreen">
+  <div class="confirm-logo-box">
+    <div class="confirm-logo-star">&#9733;</div>
+    <div class="confirm-logo-name">BLUE STAR</div>
+    <div class="confirm-logo-sub">SECURITY &amp; TRAINING &nbsp;|&nbsp; FLORIDA</div>
+  </div>
+  <div class="confirm-card">
+    <div id="confirmIcon"></div>
+    <div class="confirm-title">Florida Unarmed Security Officer Examination</div>
+    <div class="confirm-row"><span class="confirm-label">Student Name</span><span class="confirm-value" id="c-name"></span></div>
+    <div class="confirm-row"><span class="confirm-label">Date</span><span class="confirm-value" id="c-date"></span></div>
+    <div class="confirm-row"><span class="confirm-label">Instructor</span><span class="confirm-value" id="c-inst"></span></div>
+    <div class="confirm-row"><span class="confirm-label">Class Location</span><span class="confirm-value" id="c-loc"></span></div>
+    <div class="confirm-score" id="c-score"></div>
+    <div id="c-result"></div>
+    <div class="confirm-msg">
+      &#10003; &nbsp;Your examination has been submitted and your results have been sent to your instructor for review.<br><br>
+      <strong>Do not close this window</strong> until you have confirmed with your instructor that your results were received.<br><br>
+      Thank you for completing the Blue Star Security &amp; Training Florida Unarmed Security Officer Course.
+    </div>
+  </div>
+</div>
+
+<!-- Sticky submit reminder -->
+<div class="sticky-submit" id="stickyBar">
+  <div class="sticky-submit-left"><strong>Blue Star Security &amp; Training</strong> &nbsp;&mdash;&nbsp; Florida Unarmed Security Officer Exam</div>
+  <button class="sticky-submit-btn" type="button"
+    onclick="document.querySelector('.submit-area').scrollIntoView({behavior:'smooth'})">
+    Jump to Submit &darr;
+  </button>
+</div>
+
+<script>
+emailjs.init('m2lkWqF4qp0B_8DsF');
+
+var _d = atob('QixDLEIsQyxCLEMsQyxCLEMsQixCLEIsQyxGLFQsRixULEYsRixULFQsRixULEYsVCxULEIsQyxCLEIsQyxGLFQsRixULEIsQyxCLEIsQixCLEMsRixULEYsVCxGLEYsQixCLEIsQixCLEYsVCxGLFQsQixDLEIsQixDLEMsQixCLEIsRixGLFQsRixULFQsVCxGLEIsQixGLFQsQixCLEYsRixCLEMsRixULEIsQyxULEYsQixCLEYsVCxDLEIsQixCLEIsQixGLEYsVCxGLEYsVCxCLEMsQyxCLEIsQixGLFQsRixGLFQsQixCLEIsQyxCLEIsQixGLEYsVCxGLEYsVCxCLEIsQyxCLEMsQixULEYsVCxULFQsQyxCLFQsRixCLEIsVCxGLEIsQixCLEIsRCxCLEIsQixCLEYsRixULEYsRixGLFQsRixCLEIsRixU');
+var _a = _d.split(',');
+function _ans(n){ return _a[n-1]; }
+
+const CHAPTER_RANGES = [
+  {num:1,  start:1,   end:26,  name:'Ch.1  Florida Security Licensing & Laws'},
+  {num:2,  start:27,  end:35,  name:'Ch.2  Professional Conduct & Post Orders'},
+  {num:3,  start:36,  end:48,  name:'Ch.3  Legal Authority & Limitations'},
+  {num:4,  start:49,  end:57,  name:'Ch.4  Principles of Communications'},
+  {num:5,  start:58,  end:74,  name:'Ch.5  Professionalism & Human Relations'},
+  {num:6,  start:75,  end:78,  name:'Ch.6  Documentation & Reporting'},
+  {num:7,  start:79,  end:82,  name:'Ch.7  Patrol Techniques'},
+  {num:8,  start:83,  end:86,  name:'Ch.8  Access Control & Alarms'},
+  {num:9,  start:87,  end:90,  name:'Ch.9  Physical Security'},
+  {num:10, start:91,  end:94,  name:'Ch.10 Interviewing Techniques'},
+  {num:11, start:95,  end:106, name:'Ch.11 Emergency Operations'},
+  {num:12, start:107, end:117, name:'Ch.12 Safety Awareness & Fire Prevention'},
+  {num:13, start:118, end:130, name:'Ch.13 Medical Emergencies'},
+  {num:14, start:131, end:141, name:'Ch.14 Terrorism Awareness'},
+  {num:15, start:142, end:145, name:'Ch.15 Event Security & Crowd Control'},
+  {num:16, start:146, end:149, name:'Ch.16 Communications Systems'},
+  {num:17, start:150, end:166, name:'Ch.17 Special Issues'},
+  {num:18, start:167, end:170, name:'Ch.18 Introduction to Weapons'}
+];
+
+const TOTAL = 170;
+
+function gradeExam(e) {
+  e.preventDefault();
+
+  var nameField = document.getElementById('studentName');
+  if (!nameField || !nameField.value.trim()) {
+    alert('Please enter your name on the cover page before submitting.');
+    nameField.focus();
+    nameField.style.borderBottomColor = 'red';
+    window.scrollTo({top:0, behavior:'smooth'});
+    return;
+  }
+
+  var studentName = nameField.value.trim();
+  var examDate    = document.getElementById('examDate').value.trim()      || new Date().toLocaleDateString('en-US');
+  var instructor  = document.getElementById('instructor').value.trim()    || 'Not provided';
+  var classLoc    = document.getElementById('classLocation').value.trim() || 'Not provided';
+
+  // Grade silently — no answers shown on screen
+  var correct    = 0;
+  var unanswered = [];
+  var studentAns = {};
+
+  for (var i = 1; i <= TOTAL; i++) {
+    var sel = document.querySelector('input[name="q' + i + '"]:checked');
+    if (!sel) {
+      unanswered.push(i);
+      studentAns[i] = '--';
+    } else {
+      studentAns[i] = sel.value;
+      if (sel.value === _ans(i)) correct++;
+    }
+  }
+
+  var pct  = Math.round((correct / TOTAL) * 100);
+  var pass = pct >= 75;
+
+  // ── Build email report ──────────────────────────────────────────────────────
+  var LINE = '==============================================================';
+  var DASH = '--------------------------------------------------------------';
+  var msg  = LINE + '\n';
+  msg += 'BLUE STAR SECURITY & TRAINING -- FLORIDA\n';
+  msg += 'UNARMED SECURITY OFFICER FINAL EXAM RESULTS\n';
+  msg += LINE + '\n\n';
+  msg += 'STUDENT  : ' + studentName + '\n';
+  msg += 'DATE     : ' + examDate + '\n';
+  msg += 'INSTRUCTOR: ' + instructor + '\n';
+  msg += 'LOCATION : ' + classLoc + '\n\n';
+  msg += 'SCORE    : ' + correct + ' / ' + TOTAL + '  (' + pct + '%)\n';
+  msg += 'RESULT   : ' + (pass ? 'PASS' : 'NOT PASSING -- 75% required (128/170)') + '\n';
+  if (unanswered.length) msg += 'UNANSWERED: Q' + unanswered.join(', Q') + '\n';
+  msg += '\n';
+
+  msg += 'CHAPTER-BY-CHAPTER RESULTS\n' + DASH + '\n';
+  for (var ci = 0; ci < CHAPTER_RANGES.length; ci++) {
+    var ch = CHAPTER_RANGES[ci];
+    var chC = 0, chT = 0;
+    for (var q = ch.start; q <= ch.end; q++) {
+      chT++;
+      if (studentAns[q] === _ans(q)) chC++;
+    }
+    var chP = Math.round(chC / chT * 100);
+    msg += (ch.name + '                    ').slice(0,42) + chC + '/' + chT + ' (' + chP + '%)\n';
+  }
+  msg += '\n';
+
+  var wrongList = [];
+  for (var q = 1; q <= TOTAL; q++) {
+    if (studentAns[q] !== _ans(q)) {
+      var qElem = document.querySelector('input[name="q' + q + '"]');
+      var qText = qElem ? qElem.closest('.question').querySelector('.qtext').textContent.trim().substring(0,80) : '';
+      wrongList.push({q:q, student:studentAns[q], correct:_ans(q), text:qText});
+    }
+  }
+
+  if (wrongList.length === 0) {
+    msg += 'WRONG ANSWERS: None -- Perfect score!\n\n';
+  } else {
+    msg += 'WRONG ANSWERS (' + wrongList.length + ' incorrect)\n' + DASH + '\n';
+    for (var wi = 0; wi < wrongList.length; wi++) {
+      var w = wrongList[wi];
+      msg += 'Q' + w.q + '  Student: ' + w.student + '  Correct: ' + w.correct + '\n';
+      msg += '     ' + w.text + '\n';
+    }
+    msg += '\n';
+  }
+
+  msg += 'COMPLETE ANSWER RECORD\n' + DASH + '\n';
+  for (var row = 0; row < TOTAL; row += 10) {
+    var line = '';
+    for (var q = row + 1; q <= Math.min(row + 10, TOTAL); q++) {
+      var s = studentAns[q];
+      var c = _ans(q);
+      line += 'Q' + q + '(' + s + ')' + (s === c ? 'OK' : 'XX') + '  ';
+    }
+    msg += line.trimEnd() + '\n';
+  }
+
+  msg += '\n' + LINE + '\nBlue Star Security & Training -- Florida | Instructor Copy\n' + LINE;
+
+  // ── Send email ──────────────────────────────────────────────────────────────
+  emailjs.send('service_nowb2jf', 'template_6irmt2j', {
+    student_name  : studentName,
+    exam_date     : examDate,
+    instructor    : instructor,
+    class_location: classLoc,
+    score         : correct + '/' + TOTAL + ' (' + pct + '%)',
+    pass_fail     : pass ? 'PASS' : 'NOT PASSING',
+    message       : msg
+  }).then(function() {
+    console.log('Results emailed.');
+  }).catch(function(err) {
+    console.error('EmailJS error:', err);
+    alert('Exam submitted but the results email could not be sent.\nPlease screenshot this confirmation screen and send it to your instructor.\n\nError: ' + JSON.stringify(err));
+  });
+
+  // ── Hide the entire test, show confirmation screen only ─────────────────────
+  document.getElementById('examForm').style.display    = 'none';
+  document.getElementById('stickyBar').style.display   = 'none';
+  document.querySelector('.instructions').style.display = 'none';
+
+  // Populate confirmation screen
+  document.getElementById('c-name').textContent  = studentName;
+  document.getElementById('c-date').textContent  = examDate;
+  document.getElementById('c-inst').textContent  = instructor;
+  document.getElementById('c-loc').textContent   = classLoc;
+  document.getElementById('c-score').textContent = correct + ' / ' + TOTAL + ' (' + pct + '%)';
+  document.getElementById('c-result').innerHTML  = pass
+    ? '<div class="confirm-pass">&#10003; PASS &mdash; Congratulations!</div>'
+    : '<div class="confirm-fail">&#10007; NOT PASSING &mdash; 75% required</div>';
+  document.getElementById('confirmIcon').innerHTML = pass
+    ? '<div class="confirm-checkmark">&#10003;</div>'
+    : '<div class="confirm-x">&#10007;</div>';
+
+  document.getElementById('confirmScreen').style.display = 'block';
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+</body>
+</html>
