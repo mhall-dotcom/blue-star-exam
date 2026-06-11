@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Star Security &amp; Training — Class "G" 28-Hour Written Examination</title>
+  <style>
+    /* ── Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f2f5;
+      color: #1a1a2e;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: #13224e;
+      color: #fff;
+      padding: 0;
+      border-bottom: 4px solid #c9a84c;
+    }
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px 24px 22px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .star-icon {
+      font-size: 48px;
+      color: #c9a84c;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .header-text h1 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: #fff;
+    }
+    .header-text p {
+      font-size: .9rem;
+      color: #a8b8d0;
+      margin-top: 2px;
+    }
+
+    /* ── Wrapper ── */
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px 16px 60px;
+    }
+
+    /* ── Info Box ── */
+    .exam-info {
+      background: #13224e;
+      color: #fff;
+      border-radius: 8px;
+      padding: 22px 26px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 32px;
+    }
+    .exam-info h2 {
+      grid-column: 1 / -1;
+      font-size: 1.1rem;
+      color: #c9a84c;
+      border-bottom: 1px solid #2a3a6e;
+      padding-bottom: 8px;
+      margin-bottom: 6px;
+      letter-spacing: .06em;
+    }
+    .info-row { display: flex; align-items: center; gap: 8px; }
+    .info-row label { font-size: .82rem; color: #a8b8d0; white-space: nowrap; min-width: 90px; }
+    .info-row input[type="text"],
+    .info-row input[type="date"] {
+      flex: 1;
+      border: none;
+      border-bottom: 1px solid #4a5a8e;
+      background: transparent;
+      color: #fff;
+      font-size: .88rem;
+      padding: 2px 4px;
+      outline: none;
+    }
+    .info-row input::placeholder { color: #6a7a9e; }
+    .exam-meta {
+      grid-column: 1 / -1;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #2a3a6e;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .meta-badge {
+      background: #1e3060;
+      border: 1px solid #2a4070;
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: .8rem;
+      color: #c9d8f0;
+    }
+    .meta-badge strong { color: #c9a84c; }
+
+    /* ── Instructions ── */
+    .instructions {
+      background: #fff;
+      border: 1px solid #d8dfe8;
+      border-left: 5px solid #c9a84c;
+      border-radius: 6px;
+      padding: 18px 22px;
+      margin-bottom: 28px;
+    }
+    .instructions h3 {
+      font-size: .95rem;
+      color: #13224e;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 10px;
+    }
+    .instructions ol { padding-left: 20px; }
+    .instructions li { margin-bottom: 5px; font-size: .88rem; color: #333; }
+
+    /* ── Section Dividers ── */
+    .section-banner {
+      background: #13224e;
+      color: #c9a84c;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 5px;
+      margin: 32px 0 14px;
+    }
+
+    /* ── Question Cards ── */
+    .question-card {
+      background: #fff;
+      border: 1px solid #dde3ec;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      transition: border-color .2s;
+    }
+    .question-card.unanswered {
+      border-color: #e0a000;
+      background: #fffbf0;
+    }
+    .question-card.correct  { border-left: 5px solid #28a745; }
+    .question-card.incorrect { border-left: 5px solid #dc3545; }
+
+    .q-number {
+      font-size: .72rem;
+      font-weight: 700;
+      color: #c9a84c;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 6px;
+    }
+    .q-text {
+      font-size: .95rem;
+      font-weight: 600;
+      color: #13224e;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .options { display: flex; flex-direction: column; gap: 6px; }
+    .option-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 7px 10px;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background .15s;
+      font-size: .9rem;
+    }
+    .option-label:hover { background: #f0f4ff; }
+    .option-label input[type="radio"] { margin-top: 2px; accent-color: #13224e; flex-shrink: 0; }
+    .option-label.correct-answer  { background: #d4edda; border-color: #28a745; font-weight: 600; }
+    .option-label.wrong-answer    { background: #f8d7da; border-color: #dc3545; }
+
+    /* ── Result Banner ── */
+    #result-banner {
+      display: none;
+      border-radius: 10px;
+      padding: 28px 30px;
+      margin-top: 32px;
+      text-align: center;
+    }
+    #result-banner.pass { background: #d4edda; border: 2px solid #28a745; }
+    #result-banner.fail { background: #f8d7da; border: 2px solid #dc3545; }
+    #result-banner h2 { font-size: 2rem; margin-bottom: 6px; }
+    #result-banner .score-line { font-size: 1.1rem; margin-bottom: 4px; }
+    #result-banner .pct { font-size: 3rem; font-weight: 900; margin: 10px 0; }
+    #result-banner.pass .pct { color: #155724; }
+    #result-banner.fail .pct { color: #721c24; }
+    #result-banner .verdict { font-size: 1.3rem; font-weight: 700; }
+    #result-banner.pass .verdict { color: #155724; }
+    #result-banner.fail .verdict { color: #721c24; }
+
+    /* ── Buttons ── */
+    .btn-row { text-align: center; margin-top: 32px; }
+    .btn-submit {
+      background: #13224e;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 48px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .btn-submit:hover { background: #1e3570; }
+    .btn-reset {
+      background: #6c757d;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 32px;
+      font-size: .95rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-left: 12px;
+      transition: background .2s;
+    }
+    .btn-reset:hover { background: #5a6268; }
+    #missing-msg {
+      display: none;
+      color: #856404;
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 6px;
+      padding: 10px 16px;
+      margin-top: 14px;
+      font-size: .88rem;
+      text-align: center;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      color: #7a8aaa;
+      font-size: .78rem;
+      padding: 24px 16px 40px;
+    }
+
+    @media (max-width: 600px) {
+      .exam-info { grid-template-columns: 1fr; }
+      .header-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="star-icon">★</div>
+    <div class="header-text">
+      <h1>BLUE STAR SECURITY &amp; TRAINING</h1>
+      <p>Jacksonville, Florida &nbsp;|&nbsp; Florida Class "G" 28-Hour Armed Security Qualification</p>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ MAIN ═══════════ -->
+<div class="wrapper">
+
+  <!-- Student Info -->
+  <div class="exam-info">
+    <h2>WRITTEN EXAMINATION — CLASS "G" STATEWIDE FIREARM LICENSE</h2>
+    <div class="info-row">
+      <label>Student Name:</label>
+      <input type="text" id="student-name" placeholder="First and Last Name" />
+    </div>
+    <div class="info-row">
+      <label>Date:</label>
+      <input type="date" id="exam-date" />
+    </div>
+    <div class="info-row">
+      <label>Instructor:</label>
+      <input type="text" id="instructor" placeholder="Instructor Name" />
+    </div>
+    <div class="info-row">
+      <label>Class Location:</label>
+      <input type="text" id="location" placeholder="Jacksonville, FL" />
+    </div>
+    <div class="exam-meta">
+      <span class="meta-badge"><strong>Total Questions:</strong> 50</span>
+      <span class="meta-badge"><strong>Passing Score:</strong> 70% (35 correct)</span>
+      <span class="meta-badge"><strong>Time Allowed:</strong> 1 Hour</span>
+      <span class="meta-badge"><strong>Question Types:</strong> Multiple Choice &amp; True/False</span>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="instructions">
+    <h3>Examination Instructions</h3>
+    <ol>
+      <li>This examination contains 50 questions covering the 28-Hour Class "G" curriculum.</li>
+      <li>Read each question carefully before selecting your answer.</li>
+      <li>For <strong>Multiple Choice</strong> questions, select the <strong>ONE best answer</strong> (A, B, C, or D).</li>
+      <li>For <strong>True/False</strong> questions, select True or False.</li>
+      <li>Unanswered questions will automatically be marked <strong>incorrect</strong>. You do not need to answer every question before submitting.</li>
+      <li>Online students: when you click <strong>"Submit and Grade Test,"</strong> your score will appear immediately.</li>
+      <li>In-person students: do not click the Submit button. Your instructor will collect and grade your test.</li>
+      <li>Academic honesty is required. Do not use notes, textbooks, phones, or assistance from others.</li>
+    </ol>
+  </div>
+
+  <!-- ═══ FORM ═══ -->
+  <form id="exam-form" onsubmit="return false;">
+
+    <!-- Section 1 -->
+    <div class="section-banner">Section 1 — Legal Aspects &amp; Licensure (Questions 1–15)</div>
+
+    <!-- Q1 -->
+    <div class="question-card" id="card-1">
+      <div class="q-number">Question 1</div>
+      <div class="q-text">A person is justified to use deadly force when he or she reasonably believes that such conduct is necessary for defense against another's use of unlawful force that is <em>not</em> life threatening.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q1" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q1" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question-card" id="card-2">
+      <div class="q-number">Question 2</div>
+      <div class="q-text">"Deadly Force" means force which a reasonable person would consider likely to cause death or serious bodily harm.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q2" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q2" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question-card" id="card-3">
+      <div class="q-number">Question 3</div>
+      <div class="q-text">A "warning shot" is only allowable if the circumstances that would otherwise warrant the use of deadly force are present.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q3" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q3" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question-card" id="card-4">
+      <div class="q-number">Question 4</div>
+      <div class="q-text">A "G" license holder must have express written authority from his or her employer to carry a firearm while traveling to or from an armed security post.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q4" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q4" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question-card" id="card-5">
+      <div class="q-number">Question 5</div>
+      <div class="q-text">The type of liability that may include incarceration, probation, and monetary fines is:</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q5" value="A" /> A.&nbsp; Civil Liability</label>
+        <label class="option-label"><input type="radio" name="q5" value="B" /> B.&nbsp; Negligent Liability</label>
+        <label class="option-label"><input type="radio" name="q5" value="C" /> C.&nbsp; Criminal Liability</label>
+        <label class="option-label"><input type="radio" name="q5" value="D" /> D.&nbsp; Administrative Liability</label>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question-card" id="card-6">
+      <div class="q-number">Question 6</div>
+      <div class="q-text">An agency head or supervisor who is responsible for equipping licensees with firearms might be liable under this legal theory if he or she knew, or should have known, that a licensee was incompetent, but nevertheless provided the licensee with a firearm.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q6" value="A" /> A.&nbsp; Negligent Assignment</label>
+        <label class="option-label"><input type="radio" name="q6" value="B" /> B.&nbsp; Negligent Entrustment</label>
+        <label class="option-label"><input type="radio" name="q6" value="C" /> C.&nbsp; Excessive Use</label>
+        <label class="option-label"><input type="radio" name="q6" value="D" /> D.&nbsp; Standard of Care</label>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question-card" id="card-7">
+      <div class="q-number">Question 7</div>
+      <div class="q-text">The recognized and accepted operating procedure, principle, or practice for an occupation or profession is called:</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q7" value="A" /> A.&nbsp; Standard Operating Procedures</label>
+        <label class="option-label"><input type="radio" name="q7" value="B" /> B.&nbsp; Code of Conduct</label>
+        <label class="option-label"><input type="radio" name="q7" value="C" /> C.&nbsp; Division of Licensing</label>
+        <label class="option-label"><input type="radio" name="q7" value="D" /> D.&nbsp; Standard of Care</label>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question-card" id="card-8">
+      <div class="q-number">Question 8</div>
+      <div class="q-text">Liability occurs when a licensee fails to conduct him or herself within the standard of care for a security officer or private investigator, and that failure was the direct and proximate cause of an injury suffered.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q8" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q8" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="question-card" id="card-9">
+      <div class="q-number">Question 9</div>
+      <div class="q-text">Once qualified pursuant to 28-hours of initial firearms training or a 4-hour requalification course, a licensee may carry any type or caliber of firearm he or she wishes to carry.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q9" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q9" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question-card" id="card-10">
+      <div class="q-number">Question 10</div>
+      <div class="q-text">Which of the following can be used as ammunition in a semi-automatic pistol?</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q10" value="A" /> A.&nbsp; Glaser-type</label>
+        <label class="option-label"><input type="radio" name="q10" value="B" /> B.&nbsp; Teflon-coated</label>
+        <label class="option-label"><input type="radio" name="q10" value="C" /> C.&nbsp; Armor Piercing</label>
+        <label class="option-label"><input type="radio" name="q10" value="D" /> D.&nbsp; Full Metal Jacket</label>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="question-card" id="card-11">
+      <div class="q-number">Question 11</div>
+      <div class="q-text">A Class "G" licensee is not required to carry an agency issued identification card at all times when performing regulated duties.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q11" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q11" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="question-card" id="card-12">
+      <div class="q-number">Question 12</div>
+      <div class="q-text">A Class "G" licensee may carry more than 2 firearms when performing regulated duties.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q12" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q12" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="question-card" id="card-13">
+      <div class="q-number">Question 13</div>
+      <div class="q-text">A person who knowingly possesses, issues, causes to be issued, sells, submits, or offers a fraudulent training certificate, proficiency form, or other official document that declares an applicant to have successfully completed any course of training required for licensure under chapter 493, commits a felony of the 3rd degree.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q13" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q13" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="question-card" id="card-14">
+      <div class="q-number">Question 14</div>
+      <div class="q-text">Battery occurs when a person actually and intentionally touches or strikes another person against the will of the other, or intentionally causes bodily harm to another.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q14" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q14" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="question-card" id="card-15">
+      <div class="q-number">Question 15</div>
+      <div class="q-text">An armed officer can perform tasks during duty hours (such as refueling an agency-owned vehicle, purchasing carry-out food or beverage, or taking a restroom break) provided that such activities are carried out within a <em>five-mile</em> radius of the licensee's assigned duty post.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q15" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q15" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section-banner">Section 2 — Range Safety &amp; Firearm Handling (Questions 16–25)</div>
+
+    <!-- Q16 -->
+    <div class="question-card" id="card-16">
+      <div class="q-number">Question 16</div>
+      <div class="q-text">Always treat every firearm as if it were loaded.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q16" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q16" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="question-card" id="card-17">
+      <div class="q-number">Question 17</div>
+      <div class="q-text">The muzzle of a firearm should always be pointed in a safe direction.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q17" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q17" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="question-card" id="card-18">
+      <div class="q-number">Question 18</div>
+      <div class="q-text">Never __________ a firearm at anyone or anything that you do not intend to shoot.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q18" value="A" /> A.&nbsp; shove</label>
+        <label class="option-label"><input type="radio" name="q18" value="B" /> B.&nbsp; push</label>
+        <label class="option-label"><input type="radio" name="q18" value="C" /> C.&nbsp; point</label>
+        <label class="option-label"><input type="radio" name="q18" value="D" /> D.&nbsp; None of the above</label>
+      </div>
+    </div>
+
+    <!-- Q19 -->
+    <div class="question-card" id="card-19">
+      <div class="q-number">Question 19</div>
+      <div class="q-text">While on the firing range, always keep the firearm ___________ and in its __________ unless otherwise instructed.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q19" value="A" /> A.&nbsp; unloaded, locker</label>
+        <label class="option-label"><input type="radio" name="q19" value="B" /> B.&nbsp; secured, holster</label>
+        <label class="option-label"><input type="radio" name="q19" value="C" /> C.&nbsp; cocked, in shooter's hand</label>
+        <label class="option-label"><input type="radio" name="q19" value="D" /> D.&nbsp; None of the above</label>
+      </div>
+    </div>
+
+    <!-- Q20 -->
+    <div class="question-card" id="card-20">
+      <div class="q-number">Question 20</div>
+      <div class="q-text">Before training, the range instructor will inspect all firearms for proper function.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q20" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q20" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q21 -->
+    <div class="question-card" id="card-21">
+      <div class="q-number">Question 21</div>
+      <div class="q-text">Never _____________ a firearm behind the firing line.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q21" value="A" /> A.&nbsp; cock</label>
+        <label class="option-label"><input type="radio" name="q21" value="B" /> B.&nbsp; fire</label>
+        <label class="option-label"><input type="radio" name="q21" value="C" /> C.&nbsp; unholster</label>
+        <label class="option-label"><input type="radio" name="q21" value="D" /> D.&nbsp; unload</label>
+      </div>
+    </div>
+
+    <!-- Q22 -->
+    <div class="question-card" id="card-22">
+      <div class="q-number">Question 22</div>
+      <div class="q-text">Stop __________ immediately at the cease fire command.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q22" value="A" /> A.&nbsp; eating</label>
+        <label class="option-label"><input type="radio" name="q22" value="B" /> B.&nbsp; talking</label>
+        <label class="option-label"><input type="radio" name="q22" value="C" /> C.&nbsp; smoking</label>
+        <label class="option-label"><input type="radio" name="q22" value="D" /> D.&nbsp; firing</label>
+      </div>
+    </div>
+
+    <!-- Q23 -->
+    <div class="question-card" id="card-23">
+      <div class="q-number">Question 23</div>
+      <div class="q-text">If a weapon fails to fire, immediately leave the firing line with it and find the instructor.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q23" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q23" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q24 -->
+    <div class="question-card" id="card-24">
+      <div class="q-number">Question 24</div>
+      <div class="q-text">Eating and/or the use of tobacco products are permissible while on the firing line.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q24" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q24" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q25 -->
+    <div class="question-card" id="card-25">
+      <div class="q-number">Question 25</div>
+      <div class="q-text">A firearm should be __________ each time it is fired and fully inspected once per week.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q25" value="A" /> A.&nbsp; refinished</label>
+        <label class="option-label"><input type="radio" name="q25" value="B" /> B.&nbsp; cleaned</label>
+        <label class="option-label"><input type="radio" name="q25" value="C" /> C.&nbsp; sold</label>
+        <label class="option-label"><input type="radio" name="q25" value="D" /> D.&nbsp; All of the above</label>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section-banner">Section 3 — Firearm Types, Ammunition &amp; Nomenclature (Questions 26–36)</div>
+
+    <!-- Q26 -->
+    <div class="question-card" id="card-26">
+      <div class="q-number">Question 26</div>
+      <div class="q-text">It is not necessary to visually and physically inspect the cylinder of a revolver before handing it to another person.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q26" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q26" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q27 -->
+    <div class="question-card" id="card-27">
+      <div class="q-number">Question 27</div>
+      <div class="q-text">Semi-automatic pistols may operate differently based upon who manufactured them.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q27" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q27" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q28 -->
+    <div class="question-card" id="card-28">
+      <div class="q-number">Question 28</div>
+      <div class="q-text">Armor piercing ammunition may be used by anyone within the State of Florida.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q28" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q28" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q29 -->
+    <div class="question-card" id="card-29">
+      <div class="q-number">Question 29</div>
+      <div class="q-text">In shotgun ammunition, the _____ is the only part not found in any other centerfire cartridge.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q29" value="A" /> A.&nbsp; bullet</label>
+        <label class="option-label"><input type="radio" name="q29" value="B" /> B.&nbsp; casing</label>
+        <label class="option-label"><input type="radio" name="q29" value="C" /> C.&nbsp; primer</label>
+        <label class="option-label"><input type="radio" name="q29" value="D" /> D.&nbsp; wad</label>
+      </div>
+    </div>
+
+    <!-- Q30 -->
+    <div class="question-card" id="card-30">
+      <div class="q-number">Question 30</div>
+      <div class="q-text">When loading a revolver, live rounds are placed into the open ________.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q30" value="A" /> A.&nbsp; magazine</label>
+        <label class="option-label"><input type="radio" name="q30" value="B" /> B.&nbsp; cylinder</label>
+        <label class="option-label"><input type="radio" name="q30" value="C" /> C.&nbsp; trigger guard</label>
+        <label class="option-label"><input type="radio" name="q30" value="D" /> D.&nbsp; barrel</label>
+      </div>
+    </div>
+
+    <!-- Q31 -->
+    <div class="question-card" id="card-31">
+      <div class="q-number">Question 31</div>
+      <div class="q-text">In a semi-automatic pistol, the magazine holds the _____________.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q31" value="A" /> A.&nbsp; rear sight</label>
+        <label class="option-label"><input type="radio" name="q31" value="B" /> B.&nbsp; trigger safety</label>
+        <label class="option-label"><input type="radio" name="q31" value="C" /> C.&nbsp; slide stop lever</label>
+        <label class="option-label"><input type="radio" name="q31" value="D" /> D.&nbsp; ammunition</label>
+      </div>
+    </div>
+
+    <!-- Q32 -->
+    <div class="question-card" id="card-32">
+      <div class="q-number">Question 32</div>
+      <div class="q-text">A semi-automatic pistol functions by using the energy from the recoil of a single round of ammunition to extract and eject a fired cartridge from the pistol's chamber and load an unfired round from a magazine into the chamber for the next shot.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q32" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q32" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q33 -->
+    <div class="question-card" id="card-33">
+      <div class="q-number">Question 33</div>
+      <div class="q-text">__________ is the propellant used in most firearms.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q33" value="A" /> A.&nbsp; Primer</label>
+        <label class="option-label"><input type="radio" name="q33" value="B" /> B.&nbsp; Casings</label>
+        <label class="option-label"><input type="radio" name="q33" value="C" /> C.&nbsp; Powder</label>
+        <label class="option-label"><input type="radio" name="q33" value="D" /> D.&nbsp; None of the above</label>
+      </div>
+    </div>
+
+    <!-- Q34 -->
+    <div class="question-card" id="card-34">
+      <div class="q-number">Question 34</div>
+      <div class="q-text">The ___________ is the portion of the cartridge that becomes a projectile when in flight.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q34" value="A" /> A.&nbsp; wad</label>
+        <label class="option-label"><input type="radio" name="q34" value="B" /> B.&nbsp; magazine</label>
+        <label class="option-label"><input type="radio" name="q34" value="C" /> C.&nbsp; case</label>
+        <label class="option-label"><input type="radio" name="q34" value="D" /> D.&nbsp; bullet</label>
+      </div>
+    </div>
+
+    <!-- Q35 -->
+    <div class="question-card" id="card-35">
+      <div class="q-number">Question 35</div>
+      <div class="q-text">The "duty life" and "shelf life" of ammunition are one and the same.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q35" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q35" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q36 -->
+    <div class="question-card" id="card-36">
+      <div class="q-number">Question 36</div>
+      <div class="q-text">Reloaded cartridges should be used for duty ammunition.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q36" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q36" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section-banner">Section 4 — Marksmanship Fundamentals (Questions 37–50)</div>
+
+    <!-- Q37 -->
+    <div class="question-card" id="card-37">
+      <div class="q-number">Question 37</div>
+      <div class="q-text">As it pertains to breath control, the best time to fire a shot is ____.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q37" value="A" /> A.&nbsp; while running after a suspect</label>
+        <label class="option-label"><input type="radio" name="q37" value="B" /> B.&nbsp; as you inhale and exhale rapidly</label>
+        <label class="option-label"><input type="radio" name="q37" value="C" /> C.&nbsp; the extended pause between breaths</label>
+        <label class="option-label"><input type="radio" name="q37" value="D" /> D.&nbsp; All of the above</label>
+      </div>
+    </div>
+
+    <!-- Q38 -->
+    <div class="question-card" id="card-38">
+      <div class="q-number">Question 38</div>
+      <div class="q-text">__________ __________ is the relationship between the eye, front sight, rear sight and the target.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q38" value="A" /> A.&nbsp; Sight Picture</label>
+        <label class="option-label"><input type="radio" name="q38" value="B" /> B.&nbsp; Proper Stance</label>
+        <label class="option-label"><input type="radio" name="q38" value="C" /> C.&nbsp; Sight Alignment</label>
+        <label class="option-label"><input type="radio" name="q38" value="D" /> D.&nbsp; Dominant Eye</label>
+      </div>
+    </div>
+
+    <!-- Q39 -->
+    <div class="question-card" id="card-39">
+      <div class="q-number">Question 39</div>
+      <div class="q-text">A ____________ occurs when the trigger is pulled, but the round fails to detonate.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q39" value="A" /> A.&nbsp; failure to eject</label>
+        <label class="option-label"><input type="radio" name="q39" value="B" /> B.&nbsp; double feed</label>
+        <label class="option-label"><input type="radio" name="q39" value="C" /> C.&nbsp; failure to fire</label>
+        <label class="option-label"><input type="radio" name="q39" value="D" /> D.&nbsp; failure to feed</label>
+      </div>
+    </div>
+
+    <!-- Q40 -->
+    <div class="question-card" id="card-40">
+      <div class="q-number">Question 40</div>
+      <div class="q-text">Improper trigger control causes more misses than any other action in the firing process.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q40" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q40" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q41 -->
+    <div class="question-card" id="card-41">
+      <div class="q-number">Question 41</div>
+      <div class="q-text">"Follow-through" involves maintaining sight alignment before, during and after firing a round.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q41" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q41" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q42 -->
+    <div class="question-card" id="card-42">
+      <div class="q-number">Question 42</div>
+      <div class="q-text">A _______________ is the posture a shooter assumes while firing a shot.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q42" value="A" /> A.&nbsp; reach</label>
+        <label class="option-label"><input type="radio" name="q42" value="B" /> B.&nbsp; hug</label>
+        <label class="option-label"><input type="radio" name="q42" value="C" /> C.&nbsp; stance</label>
+        <label class="option-label"><input type="radio" name="q42" value="D" /> D.&nbsp; position</label>
+      </div>
+    </div>
+
+    <!-- Q43 -->
+    <div class="question-card" id="card-43">
+      <div class="q-number">Question 43</div>
+      <div class="q-text">When firing from an Isosceles Stance your head and shoulders should be ________ to the target.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q43" value="A" /> A.&nbsp; angled away from</label>
+        <label class="option-label"><input type="radio" name="q43" value="B" /> B.&nbsp; parallel</label>
+        <label class="option-label"><input type="radio" name="q43" value="C" /> C.&nbsp; square</label>
+        <label class="option-label"><input type="radio" name="q43" value="D" /> D.&nbsp; None of the above</label>
+      </div>
+    </div>
+
+    <!-- Q44 -->
+    <div class="question-card" id="card-44">
+      <div class="q-number">Question 44</div>
+      <div class="q-text">When firing from the Weaver Stance, your weapon-side foot is to the rear.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q44" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q44" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q45 -->
+    <div class="question-card" id="card-45">
+      <div class="q-number">Question 45</div>
+      <div class="q-text">When a subject is three to four feet away, one should employ the _____________ stance.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q45" value="A" /> A.&nbsp; isosceles</label>
+        <label class="option-label"><input type="radio" name="q45" value="B" /> B.&nbsp; weaver</label>
+        <label class="option-label"><input type="radio" name="q45" value="C" /> C.&nbsp; hip shooting</label>
+        <label class="option-label"><input type="radio" name="q45" value="D" /> D.&nbsp; kneeling</label>
+      </div>
+    </div>
+
+    <!-- Q46 -->
+    <div class="question-card" id="card-46">
+      <div class="q-number">Question 46</div>
+      <div class="q-text">A barricade position is defined as a position that is behind cover.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q46" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q46" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q47 -->
+    <div class="question-card" id="card-47">
+      <div class="q-number">Question 47</div>
+      <div class="q-text">One handed shooting capabilities are not a necessity.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q47" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q47" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q48 -->
+    <div class="question-card" id="card-48">
+      <div class="q-number">Question 48</div>
+      <div class="q-text">Point shooting is the technique used when you cannot use the sights on your weapon or you have no time to align the sight properly.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q48" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q48" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q49 -->
+    <div class="question-card" id="card-49">
+      <div class="q-number">Question 49</div>
+      <div class="q-text">When drawing a handgun from the holster, it is important to keep your finger outside of the trigger guard and off of the trigger.</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q49" value="A" /> A.&nbsp; True</label>
+        <label class="option-label"><input type="radio" name="q49" value="B" /> B.&nbsp; False</label>
+      </div>
+    </div>
+
+    <!-- Q50 -->
+    <div class="question-card" id="card-50">
+      <div class="q-number">Question 50</div>
+      <div class="q-text">An example of cover is:</div>
+      <div class="options">
+        <label class="option-label"><input type="radio" name="q50" value="A" /> A.&nbsp; a fire hydrant</label>
+        <label class="option-label"><input type="radio" name="q50" value="B" /> B.&nbsp; a vehicle engine block</label>
+        <label class="option-label"><input type="radio" name="q50" value="C" /> C.&nbsp; solid concrete wall</label>
+        <label class="option-label"><input type="radio" name="q50" value="D" /> D.&nbsp; All of the above</label>
+      </div>
+    </div>
+
+    <!-- Missing warning -->
+
+
+    <!-- Submit -->
+    <div class="btn-row">
+      <button class="btn-submit" type="button" onclick="gradeExam()">Submit and Grade Test</button>
+      <button class="btn-reset" type="button" onclick="resetExam()">Reset / Start Over</button>
+    </div>
+
+    <!-- Result Banner -->
+    <div id="result-banner">
+      <h2 id="result-title"></h2>
+      <div class="pct" id="result-pct"></div>
+      <div class="score-line" id="result-score"></div>
+      <div class="verdict" id="result-verdict"></div>
+    </div>
+
+  </form>
+</div>
+
+<footer>
+  &copy; 2026 Blue Star Security &amp; Training &nbsp;|&nbsp; Jacksonville, Florida &nbsp;|&nbsp;
+  Authorized pursuant to Chapter 493, Florida Statutes &amp; Rule Chapter 5N-1, F.A.C.
+</footer>
+
+<!-- ═══════════ GRADING SCRIPT ═══════════ -->
+<script>
+  // Answer key — 1-indexed
+  const ANSWERS = {
+     1:'B',  2:'A',  3:'A',  4:'A',  5:'C',
+     6:'B',  7:'D',  8:'A',  9:'B', 10:'D',
+    11:'B', 12:'B', 13:'A', 14:'A', 15:'B',
+    16:'A', 17:'A', 18:'C', 19:'B', 20:'A',
+    21:'C', 22:'D', 23:'B', 24:'B', 25:'B',
+    26:'B', 27:'A', 28:'B', 29:'D', 30:'B',
+    31:'D', 32:'A', 33:'C', 34:'D', 35:'B',
+    36:'B', 37:'C', 38:'A', 39:'C', 40:'A',
+    41:'A', 42:'C', 43:'C', 44:'A', 45:'C',
+    46:'A', 47:'B', 48:'A', 49:'A', 50:'D'
+  };
+  const TOTAL = 50;
+  const PASS_SCORE = 35; // 70%
+
+  function gradeExam() {
+    document.getElementById('missing-msg').style.display = 'none';
+
+    // Grade — unanswered questions are automatically wrong
+    let correct = 0;
+    for (let q = 1; q <= TOTAL; q++) {
+      const checkedEl = document.querySelector(`input[name="q${q}"]:checked`);
+      const chosen = checkedEl ? checkedEl.value : null;
+      const right  = ANSWERS[q];
+      const card   = document.getElementById(`card-${q}`);
+      const labels = card.querySelectorAll('.option-label');
+
+      // Remove old feedback
+      labels.forEach(l => l.classList.remove('correct-answer','wrong-answer'));
+      card.classList.remove('correct','incorrect');
+
+      if (chosen === right) {
+        correct++;
+        card.classList.add('correct');
+        labels.forEach(l => {
+          if (l.querySelector('input').value === right) l.classList.add('correct-answer');
+        });
+      } else {
+        card.classList.add('incorrect');
+        labels.forEach(l => {
+          const v = l.querySelector('input').value;
+          if (chosen && v === chosen) l.classList.add('wrong-answer');
+          if (v === right)            l.classList.add('correct-answer');
+        });
+      }
+
+      // Disable all inputs on this card
+      card.querySelectorAll('input[type="radio"]').forEach(r => r.disabled = true);
+    }
+
+    const pct   = Math.round((correct / TOTAL) * 100);
+    const pass  = correct >= PASS_SCORE;
+    const banner = document.getElementById('result-banner');
+
+    banner.className = pass ? 'pass' : 'fail';
+    document.getElementById('result-title').textContent  = pass ? '✓ Examination Complete' : '✗ Examination Complete';
+    document.getElementById('result-pct').textContent    = pct + '%';
+    document.getElementById('result-score').textContent  = `Score: ${correct} correct out of ${TOTAL} questions`;
+    document.getElementById('result-verdict').textContent = pass
+      ? `PASSED — You met the minimum passing score of 70% (${PASS_SCORE}/${TOTAL}).`
+      : `NOT PASSED — A minimum score of 70% (${PASS_SCORE}/${TOTAL}) is required. Please review and retest.`;
+
+    banner.style.display = 'block';
+    banner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function resetExam() {
+    if (!confirm('Are you sure you want to clear all answers and start over?')) return;
+    document.getElementById('exam-form').reset();
+    for (let q = 1; q <= TOTAL; q++) {
+      const card = document.getElementById(`card-${q}`);
+      card.className = 'question-card';
+      card.querySelectorAll('.option-label').forEach(l => l.className = 'option-label');
+      card.querySelectorAll('input[type="radio"]').forEach(r => r.disabled = false);
+    }
+    const banner = document.getElementById('result-banner');
+    banner.style.display = 'none';
+    banner.className = '';
+    document.getElementById('missing-msg').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
